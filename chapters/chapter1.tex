@@ -239,8 +239,56 @@
         \end{enumerate}
         %例7
     \item 设$f(x)$在$x=0$处可导，$f(0)\neq0$，$f^\prime(0)\neq0$，当$h\to0$时，$af(h)+bf(2h)-f(0)$是比$h$更高阶的无穷小，求$a$，$b$的值。
+        \begin{align*}
+            sol:&\because \lim_{h \to 0} af(h)+bf(2h)-f(0)=0\\
+            &\mbox{并且}f(x)\mbox{在}x=0\mbox{可导，}\rightarrow\mbox{连续，代入}\\
+            &af(0)+bf(0)-f(0)=0\\
+            &(a+b-1)f(0)=0\\
+            &a+b=1\\
+            &\mbox{回代}\\
+            &\lim_{h \to 0}\frac{af(h)+bf(2h)-(a+b)f(0)}{h}\\
+            &=\lim_{h \to 0}a\frac{f(h)-f(0)}{h}+\lim_{h \to 0}2b\frac{f(2h)-f(0)}{2h}\\
+            &=af^{\prime}(0)+2bf^{\prime}(0)=0\\
+            &\therefore
+            \begin{cases}
+                a+b=1\\
+                a+2b=0
+            \end{cases}
+            \Rightarrow
+            \begin{cases}
+                a=2\\
+                b=-1
+            \end{cases}
+        \end{align*}
     %例8
     \item 设$f(x)$为连续函数，$f(0)\neq0$，求极限$\lim\limits_{x\to0}\frac{\int_0^x (x-t)f(t)dt}{x\int_0^xf(t)dt}$。
+
+        $sol:$
+        \begin{align*}
+            &\lim_{x \to 0}\frac{xf(x)+\int_0^x f(t)dt-xf(x)}{xf(x)+\int_0^x f(t)dt}\\
+            &=\lim_{x \to 0}\frac{\int_0^x f(t)dt}{xf(x)+\int_0^x f(t)dt}
+        \end{align*}
+        \begin{enumerate}[$1^\circ$]
+            \item 
+                \begin{align*}
+                    \mbox{原式}&=\lim_{x \to 0}\frac{\frac{\int_0^x f(t)dt}{x}}{f(x)+\frac{\int_0^x f(t) dt}{x}}\\
+                    \mbox{先计算}&\lim_{x \to 0}\frac{\int_0^x f(t) dt}{x}\\
+                    &=\lim_{x \to 0}f(x)\\
+                    &=f(0)\\
+                    \therefore\mbox{原式}&=\lim_{x \to 0}\frac{f(0)}{f(x)+f(0)}\\
+                    &=\frac{1}{2}
+                \end{align*}
+            \item 泰勒展开
+                \begin{align*}
+                    \mbox{设}F(x)&=\int_0^x f(t)dt\\
+                    F(x)&=F(0)+F^{\prime}(0)x+o(x)\\
+                    &=0+f(x)x+o(x)\\
+                    \therefore\mbox{原式}&=\lim_{x \to 0}\frac{F(x)}{xf(x)+F(x)}\\
+                    &=\lim_{x \to 0}\frac{xf(x)+o(x)}{xf(x)+xf(x)+o(x)}\\
+                    &=\lim_{x \to 0}\frac{f(x)+\frac{o(x)}{x}}{2f(x)+\frac{o(x)}{x}}\\
+                    &=\frac{1}{2}
+                \end{align*}
+        \end{enumerate}
     %例9
     \item 当$x\to0$时，$1-\cos x\cos 2x\cos 3x$与$ax^n$为等阶无穷小，求常数$a$与$n$的值。
     %例10
