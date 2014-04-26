@@ -1,0 +1,84 @@
+\chapter{导数与微分}
+\section{考点解析} % (fold)
+\label{sec:考点解析}
+
+% section 考点解析 (end)
+
+\section{经典例题} % (fold)
+\label{sec:经典例题}
+
+\begin{enumerate}[{例}1.]
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{\ln x}{x}dx$
+                \item $\int \frac{1}{x^2}e^{-\frac{1}{x}}dx$
+                \item $\int \sqrt{\frac{\arcsin x}{1-x^2}}dx$
+                \item $\int \frac{\ln \tan x}{\sin x \cos x}dx$
+            \end{enumerate}
+        %例题1
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{1+\ln x}{(x\ln x)^2}dx$
+                \item $\int \frac{\ln (1+x)-\ln x}{x(1+x)}dx$
+                \item $\int \sqrt{\frac{x}{1-x\sqrt{x}}}dx$
+                \item $\int \frac{1+x}{x(1+xe^x)}dx$
+            \end{enumerate}
+        %例题2
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{1}{x(1+x^n)}dx \quad (n \neq 0)$
+                \item $\int \frac{1}{(2x^2+1)\sqrt{x^2+1}}dx$
+                \item $\int \frac{\ln x}{(1+x^2)^{\frac{3}{2}}}dx$
+            \end{enumerate}
+        %例题3
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{x^2\arctan x}{1+x^2}dx$
+                \item $\int \frac{1}{x^2(1+x^2)^2}dx$
+                \item $\int \frac{1}{x\sqrt{4-x^2}}dx$
+                \item $\int \frac{1}{x^2\sqrt{x^2-x+1}}dx$
+            \end{enumerate}
+        %例题4
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{\arcsin x}{x^2\sqrt{1-x^2}}dx$
+                \item $\int \frac{xe^x}{\sqrt{e^x -1}}dx$
+                \item $\int \frac{1}{2-\sqrt[3]{x+1}}dx$
+                \item $\int \frac{\sqrt[3]{x}}{x(\sqrt{x}+\sqrt[3]{x})}dx$
+            \end{enumerate}
+        %例题5
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{1}{\sqrt{2x+1}+\sqrt{x-1}}dx$
+                \item $\int \frac{1}{(1+e^x)^2}dx$
+                \item $\int \frac{\arcsin \sqrt{x}}{\sqrt{1-x}}dx$
+                \item $\int \frac{\arcsin x}{\sqrt{1+x}}dx$
+            \end{enumerate}
+        %例题6
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{\sqrt{x}}{(x-1)^2}dx$
+                \item $\int \frac{\arctan e^x}{e^x}dx$
+                \item $\int \frac{\arctan e^x}{e^{2x}}dx$
+                \item $\int \frac{x^2}{(x\sin x+ \cos x)^2}dx$
+            \end{enumerate}
+        %例题7
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{x}{1+\cos x}dx$
+                \item $\int \frac{1+\sin x}{1+\cos x}e^xdx$
+                \item $\int \frac{e^x}{x}(1+x\ln x)dx$
+                \item $\int e^{-\left|x\right|}dx$
+            \end{enumerate}
+        %例题8
+    \item   \begin{enumerate}[(1)]
+                \item $\int \frac{1}{\sin 2x - 2 \sin x}dx$
+                \item $\int \frac{1}{\sin^2 x+3}dx$
+                \item $\int \frac{1}{2+\cos x}dx$
+                \item $\int \frac{1}{\sin x+\cos x}dx$
+            \end{enumerate}
+        %例题9
+    \item 设$F(x)$是$f(x)$的一个原函数，$F(x)>0$，$F(0)=1$，当$x>0$时，$f(x)F(x)=\frac{xe^x}{2(1+x)^2}$，求$f(x)$。
+        %例题10
+    \item 已知$a\neq b$，求$A$，$B$的值，使得$\int \frac{dx}{(a+b\cos x)^2}=\frac{A\sin x}{a+b\cos x}+B\int \frac{dx}{a + b\cos x}$。
+        %例题11
+\end{enumerate}
+% section 经典例题 (end)
+\section{习题} % (fold)
+\label{sec:习题}
+\begin{enumerate}
+    \item
+\end{enumerate}
+% section 习题 (end)

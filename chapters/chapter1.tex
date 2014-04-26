@@ -1,0 +1,297 @@
+\chapter{函数、极限、连续}
+\section{考点解析} % (fold)
+\label{sec:考点解析}
+
+% section 考点解析 (end)
+
+\section{经典例题} % (fold)
+\label{sec:经典例题}
+
+\begin{enumerate}[{例}1.]
+    \item   
+        \begin{enumerate}[(1)]
+            \item $\lim\limits_{x\to 0}(\cos x)^{\frac{1}{\ln{(1+x^2)}}}$
+                    \begin{align*}
+                    sol&=\lim_{x\to0}\left[1+(\cos x-1)\right]^\frac{1}{\ln{1+x^2}}\\
+                        &=\exp{\lim_{x\to0}\frac{\cos x-1}{\ln(1+x^2)}}
+                        =\exp{\lim_{x\to0}\frac{-\frac{1}{2}x^2}{x^2}}
+                        =e^{-\frac{1}{2}}
+                    \end{align*}
+            \item $\lim\limits_{x\to+{\infty}}\Big(\sqrt{x+\sqrt{x}}-\sqrt{x-\sqrt{x}}\Big)$
+                \begin{align*}
+                    sol&=\lim_{x\to+\infty}\frac{2\sqrt{x}}{\sqrt{x+\sqrt{x}}+\sqrt{x-\sqrt{x}}}\\
+                       &=\lim_{x\to+\infty}\frac{2}{\sqrt{1+\frac{1}{\sqrt{x}}}+\sqrt{1-\frac{1}{\sqrt{x}}}}
+                        =1
+                \end{align*}
+        \end{enumerate}
+    %例1
+    \item   
+        \begin{enumerate}[(1)]
+            \item $\lim\limits_{x\to0}\Big[\frac{a}{x}-(\frac{1}{x^2}-a^2)\ln{(1+ax)}\Big]$, $a$为常数。
+                \begin{align*}
+                    sol&=\lim_{x\to0}\frac{ax+\ln{(1+ax)}}{x^2}+a^2\lim_{x\to0}\ln{(1+ax)}\\
+                       &=\lim_{x\to0}\frac{a-\frac{a}{1+ax}}{2x}+a^2\lim_{x\to0}ax
+                        =\lim_{x\to0}\frac{a^2}{2(1+ax)}+0
+                        =\frac{1}{2}a^2
+                \end{align*}
+            \item $\lim\limits_{x\to0}\frac{e^{\sin 2x}-e^{2\sin x}}{x^3}$
+                \begin{align*}
+                    sol&=\lim_{x\to0}e^{2\sin x}\lim_{x\to0}\frac{e^{\sin 2x-2\sin x}-1}{x^3}\\
+                       &=\lim_{x\to0}\frac{\sin 2x+2\sin x}{x^3}\\
+                       &=\lim_{x\to0}\frac{2\cos 2x-2\cos x}{3x^2} &or=&\lim_{x\to0}\frac{2\sin x(\cos x-1)}{x^3}\\
+                       &=\lim_{x\to0}\frac{-4\sin 2x+2\sin x}{6x}    &=&\lim_{x\to0}-\frac{2\sin x \frac{1}{2}x^2}{x^3}\\
+                       &=\lim_{x\to0}\frac{-8\sin 2x+2\cos x}{6}     &=&\lim_{x\to0}-\frac{\sin x}{x}\\
+                       &=-1                                          &=&-1
+                \end{align*}
+        \end{enumerate}
+    %例2
+    \item  
+        \begin{enumerate}[(1)]
+            \item $\lim\limits_{x\to0}\frac{(1+x)^{\frac{1}{x}}-e}{x}$
+                \begin{align*}
+                    sol&=\lim_{x\to0}\frac{e^{\frac{\ln{(1+x)}}{x}}-e}{x}\\
+                       &=\lim_{x\to0}\frac{e^{\frac{\ln{(1+x)}}{x}-1}-1}{x}e
+                        =\lim_{x\to0}\frac{\frac{\ln{(1+x)}}{x}-1}{x}e\\
+                       &=\lim_{x\to0}\frac{\ln{(1+x)}-x}{x^2}e
+                        =\lim_{x\to0}\frac{\frac{1}{1+x}-1}{2x}e\\
+                       &=\lim_{x\to0}-\frac{1}{2(1+x)}e
+                        =-\frac{1}{2}e
+                \end{align*}
+            \item $\lim\limits_{x\to1}\frac{x-x^x}{1-x+\ln x}$
+                \begin{align*}
+                    sol&=\lim_{x\to1}\frac{1-x^{(x-1)}}{1-x+\ln x}\lim_{x\to1}x
+                        =\lim_{x\to1}\frac{1-e^{(x-1)\ln x}}{1-x+\ln x}\\
+                       &=\lim_{x\to1}\frac{-(x-1)\ln x}{1-x+\ln x}
+                        =\lim_{x\to1}-\frac{\ln x +\frac{x-1}{x}}{-1+\frac{1}{x}}\\
+                       &=\lim_{x\to1}-\frac{\frac{1}{x}+\frac{1}{x^2}}{-\frac{1}{x^2}}
+                        =\lim_{x\to1}\frac{x+1}{1}
+                        =2
+                \end{align*}
+            \item $\lim\limits_{n\to\infty}\Big(n\tan\frac{1}{n}\Big)^{n^2}$
+
+                $n\to+\infty$是$x\to+\infty$的特殊情况，将$n$换为$x$，有$\lim\limits_{x\to +\infty}(x\tan \frac{1}{x})^{x^2}$，$x\to +\infty$求极限不方便，倒代换$t= \frac{1}{x}$，
+                \begin{align*}
+                    sol&\xrightarrow{t=\frac{1}{x}}\lim_{t \to 0^+}(\frac{\tan t}{t})^{\frac{1}{t^2}}
+                    =\exp \lim_{t \to 0^+}\frac{\ln(\frac{\tan t}{t})}{t^2}\\
+                    &=\exp \lim_{t \to 0^+}\frac{\ln(\frac{\tan t}{t}-1+1)}{t^2}
+                    =\exp \lim_{t \to 0^+}\frac{\frac{\tan t}{t}-1}{t^2}\\
+                    &=\exp \lim_{t \to 0^+}\frac{\tan t-t}{t^3}
+                    =\exp \lim_{t \to 0^+}\frac{\frac{\sin ^2 t}{\cos ^2 t}}{3t^2}\\
+                    &=\exp \lim_{t \to 0^+}\frac{t^2}{3t^2}
+                    =e^{\frac{1}{3}}
+                \end{align*}
+            \item $\lim\limits_{x\to0^+}\ln x \ln (1-x)$
+                \begin{align*}
+                    sol&\xrightarrow{\ln (1-x) \thicksim-x}\lim_{x \to 0^+}-x\ln x\\
+                    &=\lim_{x \to 0^+}-\frac{\ln x}{\frac{1}{x}}
+                     =\lim_{x \to 0^x}\frac{\frac{1}{x}}{\frac{1}{x^2}}\\
+                    &=\lim_{x \to 0^x}x
+                     =0
+                \end{align*}
+        \end{enumerate}
+    %例3
+    \item 
+        \begin{enumerate}[(1)]
+            \item $\lim\limits_{x\to+\infty}\Big[x-(1+e^{-x})\ln(1+e^x)\Big]$
+
+                $sol:$
+                看$e^x$不顺眼，换
+                \begin{enumerate}[$1^\circ$]
+                    \item   \begin{align*}
+                                &\xrightarrow{t=e^x \to \infty}\lim_{t\to \infty}[\ln t-(1+t^{-1})\ln (1+t)]\\
+                                &=\lim_{t \to \infty}[\ln t - \ln (1+t)-\frac{\ln (1+t)}{t}]\\
+                                &=\lim_{t \to \infty}[\ln \frac{t}{1+t}-\frac{\ln (1+t)}{t}]\\
+                                &=\lim_{t \to \infty}\ln \frac{1}{\frac{1}{t}+1}-\lim_{t \to \infty}\frac{\frac{1}{1+t}}{1}\\
+                                &=0-0=0
+                            \end{align*}
+                    \item   \begin{align*}
+                                &\xrightarrow{t=e^{-x} \to 0^+}\lim_{t\to 0^+}[-\ln t-(1+t)\ln (1+t^{-1})]\\
+                                &=\lim_{t \to 0^+}[-\ln t - \ln (1+\frac{1}{t})-t \ln (1+\frac{1}{t})]\\
+                                &=\lim_{t \to 0^+}[-\ln(t+1)] - \lim_{t \to 0^+} \frac{\ln (1+\frac{1}{t})}{\frac{1}{t}}\\
+                                &=\lim_{t \to 0^+}[-\ln(t+1)] - \lim_{t \to 0^+} \frac{\frac{-\frac{1}{t^2}}{1+\frac{1}{t}}}{-\frac{1}{t^2}}\\
+                                &=0-0=0
+                            \end{align*}
+                    \item 或恒等变换
+                            \begin{align*}
+                                &=\lim_{x \to +\infty}[x-\ln (1+e^x)]-\lim_{x \to +\infty}\frac{\ln(1+e^x)}{e^x}\\
+                                &=\lim_{x \to +\infty}[\ln e^x-\ln (1+e^x)]-\lim_{x \to +\infty}\frac{\ln(1+e^x)}{e^x}\\
+                                &=\lim_{x \to +\infty}\ln \frac{1+e^x}{e^x}-\lim_{x \to +\infty}\frac{\frac{e^x}{1+e^x}}{e^x}\\
+                                &=0-0=0
+                            \end{align*}
+                \end{enumerate}
+            \item $\lim\limits_{x\to0}\bigg(\frac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\frac{\sin x}{\left|x\right|}\bigg)$
+                
+                遇绝对值，分左右极限。
+
+                $sol$
+                \begin{align*}
+                    &\lim_{x \to 0^+}\bigg(\frac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\frac{\sin x}{\left|x\right|}\bigg)
+                    =\lim_{x \to 0^+}\bigg(\frac{2e^{-\frac{4}{x}+e^{-\frac{3}{x}}}}{e^{-\frac{4}{x}+1}}+1\bigg)=1\\
+                    &\lim_{x \to 0^-}\bigg(\frac{2+e^{\frac{1}{x}}}{1+e^{\frac{4}{x}}}+\frac{\sin x}{\left|x\right|}\bigg)
+                    =1\\
+                    &\therefore\mbox{原式}=1
+                \end{align*}
+            \item $\lim\limits_{x\to0}\frac{3\sin x+x^2\cos\frac{1}{x}}{(1+\cos x)\ln(1+x)}$
+                \begin{align*}
+                    sol&=\lim_{x \to 0}\frac{3\sin x+ x^2\cos \frac{1}{x}}{2x}
+                        =\lim_{x \to 0}\frac{3 \sin x}{2x}+\lim_{x \to 0}\frac{x\cos\frac{1}{x}}{2}\\
+                        &=\frac{3}{2}
+                \end{align*}
+        \end{enumerate}
+    %例4
+    \item  
+        \begin{enumerate}[(1)]
+            \item $\lim\limits_{x\to{+\infty}}\bigg(\frac{\pi}{2}-\arctan x\bigg)^{\frac{1}{\ln x}}$
+
+                $sol=\exp \lim\limits_{x \to +\infty}\frac{\ln(\frac{\pi}{2}-\arctan x)}{\ln x}=\exp \lim\limits_{x \to +\infty}\frac{-x}{(1+x^2)(\frac{\pi}{2}-\arctan x)}$
+                \begin{enumerate}[$1^\circ$]
+                    \item 
+                        \begin{align*}
+                            &=\exp \lim_{x \to +\infty} \frac{-\frac{1}{x}}{(\frac{1}{x^2}+1)(\frac{\pi}{2}-\arctan x)}\\
+                            &=\exp \lim_{x \to +\infty} \frac{-\frac{x}{1+x^2}}{\frac{\pi}{2}-\arctan x}\\
+                            &=\exp \lim_{x \to +\infty} \frac{-\frac{1-x^2}{(1+x^2)^2}}{-\frac{1}{1+x^2}}\\
+                            &=\exp \lim_{x \to +\infty} \frac{1-x^2}{1+x^2}=e^{-1}
+                        \end{align*}
+                    \item
+                        \begin{align*}
+                            &=\exp \lim_{x \to +\infty} \frac{-\frac{1}{x}}{(1+\frac{1}{x^2})(\frac{\pi}{x}-\arctan x)}\\
+                            &=\exp \lim_{x \to +\infty} \frac{-\frac{1}{x}}{\frac{\pi}{2}-\arctan x}\\
+                            &=\exp \lim_{x \to +\infty} \frac{\frac{1}{x^2}}{-\frac{1}{1+x^2}}=e^{-1}
+                        \end{align*}
+                    \item
+                        \begin{align*}
+                            &=\exp \lim_{x \to +\infty} \frac{-1}{2x(\frac{\pi}{2}-\arctan x)-1}\\
+                            &\xrightarrow{\mbox{先求}}\lim_{x \to +\infty} x(\frac{\pi}{2}-\arctan x)\\
+                            &=\lim_{x \to +\infty} \frac{\frac{\pi}{2}-\arctan x}{\frac{1}{x}}\\
+                            &=\lim_{x \to +\infty} \frac{-\frac{1}{1+x^2}}{-\frac{1}{x^2}}=1\\
+                            &\therefore \exp \lim_{x \to +\infty}\frac{-1}{2-1}=e^{-1}
+                        \end{align*}
+                    \end{enumerate}
+            \item $\lim\limits_{x\to 0^+}\frac{1-\cos x}{\sqrt{1-x}-\cos\sqrt{x}}$
+                \begin{align*}
+                    sol&=\lim_{x \to 0^+} \frac{\sqrt{1-x}\cos x}{1-x-\cos ^2 \sqrt{x}}\frac{1-\cos ^2 x}{1+\cos ^2 x}\\
+                       &=\lim_{x \to 0^+}\frac{\sqrt{1x}+\cos \sqrt{x}}{1+\cos x}\frac{\sin ^2 x}{1-x-\cos ^2 \sqrt{x}}\\
+                       &=\lim_{x \to 0^+}\frac{2}{2} \frac{x^2}{\sin ^2 \sqrt{x}-x}\\
+                       &\xrightarrow{t=\sqrt{x}}\lim_{x \to 0^+}\frac{t^4}{\sin ^2 t-t^2}
+                       =\lim_{x \to 0^+}\frac{2t^3}{\sin t \cos t-t}\\
+                       &=\lim_{x \to 0^+}\frac{6t^2}{\cos ^2 t-\sin ^2 t -1}
+                        =\lim_{x \to 0^+}\frac{3t^2}{-\sin ^2 t}\\
+                       &=-3
+                \end{align*}
+        \end{enumerate}
+    %例5
+    \item 已知$\lim\limits_{x\to\infty}\Big[(x^5+6x^4+2)^\alpha-x\Big]=\beta$, 求$\alpha$，$\beta$的值。
+        \begin{align*}
+            sol:&\because \lim\limits_{x\to\infty}\Big[(x^5+6x^4+2)^\alpha-x\Big]=\beta\\
+            &\therefore \lim_{x \to +\infty}[(x^5+7x^4+2)^{\alpha}-x]=\lim_{x \to +\infty}x\bigg[\frac{(x^5+7x^4+2)^{\alpha}}{x}-1\bigg]=0\\
+            &\mbox{即}\lim_{x \to +\infty}\bigg(\frac{x^5+7x^4+2}{x^{\frac{1}{\alpha}}}\bigg)^\alpha =1\\
+            &\therefore \frac{1}{\alpha}=5 \Rightarrow \alpha=5
+        \end{align*}
+            又 $\because \beta=\lim\limits_{x \to +\infty}(\sqrt[5]{x^5+7x^4+2}-x)$
+        \begin{enumerate}[$1^\circ$]
+            \item 
+                \begin{align*}
+                    &=\lim_{x \to +\infty}x(\sqrt[5]{x^5+7x^4+2}-1)\\
+                    &=\lim_{x \to +\infty}x\frac{1}{5}(\frac{7}{x}+\frac{2}{x^5})=\frac{7}{5}
+                \end{align*}
+            \item 
+                \begin{align*}
+                    &\xrightarrow{t=\frac{1}{x}\to 0^+}\lim_{t \to 0^+}\bigg(\sqrt[5]{\frac{1}{t^5}+\frac{7}{t^4}+2}-\frac{1}{t}\bigg)\\
+                    &=\lim_{t \to 0^+} \frac{1}{t}(\sqrt[5]{1+7t+2t^5}-1)\\
+                    &=\lim_{t \to 0^+} \frac{1}{t}\cdot\frac{1}{5}(7t+2t^5)=\frac{7}{5}
+                \end{align*}
+        \end{enumerate}
+
+    %例6
+    \item 设$f(x)$在$(0,+\infty)$内可导，$f(x)>0$，$\lim\limits_{x\to{+\infty}}f(x)=1$且$\lim\limits_{h\to0}\bigg[\frac{f(x+hx)}{f(x)}\bigg]^\frac{1}{h}=e^\frac{1}{x}$，求$f(x)$。
+        \begin{align*}
+            sol:&\because \lim_{h \to 0}\bigg[\frac{f(x+hx)}{f(x)}\bigg]^{\frac{1}{h}}=e^{\frac{1}{x}}\\
+            &\therefore \lim_{h \to 0}\frac{\ln \frac{f(x+hx)}{f(x)}}{h}=\frac{1}{x}
+        \end{align*}
+        \begin{enumerate}[$1^\circ$]
+            \item ``$+1-1$''法
+                \begin{align*}
+                    \lim_{h \to 0}\frac{\ln(\frac{f(x+hx)-f(x)}{f(x)}+1)}{h}&=\frac{1}{x}\\
+                    \lim_{h \to 0}\frac{f(x+hx)-f(x)}{hf(x)}&=\frac{1}{x}\\
+                    \lim_{h \to 0}\frac{f(x+hx)-f(x)}{hx}&=\frac{1}{x^2}f(x)\\
+                    f^{\prime}(x)&=\frac{1}{x^2}f(x)\\
+                    \therefore f(x)&=e^{-\frac{1}{x}}
+                \end{align*}
+            \item 
+                \begin{align*}
+                    \lim_{h \to 0} \frac{\ln f(x+hx)-\ln f(x)}{h}&=\frac{1}{x}\\
+                    \lim_{h \to 0} \frac{\ln f(x+hx)-\ln f(x)}{hx}\cdot x&=\frac{1}{x}\\
+                    x\cdot[\ln f(x)]^{\prime}&=\frac{1}{x}\\
+                    \therefore (\ln f(x))^{\prime}&=\frac{1}{x}\\
+                    \ln f(x)&=\frac{1}{x}\\
+                    f(x)&=e^{-\frac{1}{x}}
+                \end{align*}
+            \item 泰勒展开法
+                \begin{align*}
+                    f(x)=f(x_0)+f^{\prime}(x_0)(x-x_0)+o(x-x_0)\\
+                    \therefore f(x+\Delta x)=f(x)+f^{\prime}(x)\Delta x+o(\Delta x)\\
+                    \therefore \ln f(x+hx)=\ln f(x)+[\ln f(x)]^{\prime}hx+o(hx)\\
+                    \mbox{则}\lim_{h \to 0}\frac{\ln f(x+hx)-\ln f(x)}{h}&=\frac{1}{x}\\
+                    \lim_{h \to 0}\frac{[\ln f(x)]^{\prime}hx+o(hx)}{h}&=\frac{1}{x}\\
+                    [\ln f(x)]^{\prime}&=\frac{1}{x^2}\\
+                    \therefore f(x)&=e^{-\frac{1}{x}}
+                \end{align*}
+        \end{enumerate}
+        %例7
+    \item 设$f(x)$在$x=0$处可导，$f(0)\neq0$，$f^\prime(0)\neq0$，当$h\to0$时，$af(h)+bf(2h)-f(0)$是比$h$更高阶的无穷小，求$a$，$b$的值。
+    %例8
+    \item 设$f(x)$为连续函数，$f(0)\neq0$，求极限$\lim\limits_{x\to0}\frac{\int_0^x (x-t)f(t)dt}{x\int_0^xf(t)dt}$。
+    %例9
+    \item 当$x\to0$时，$1-\cos x\cos 2x\cos 3x$与$ax^n$为等阶无穷小，求常数$a$与$n$的值。
+    %例10
+    \item 当$x\to0$时，$x^2+\ln(1+x)\ln(1-x)$与$ax^n$为等价无穷小，求常数$a$与$n$的值。
+    %例11
+    \item 已知$\lim\limits_{x\to0}\frac{a\tan x+b(1-\cos x)}{c\ln(1-2x)+d(1-e^{-x^2})}=2$，$(a^2+c^2\neq0)$，则$(\quad)\\ A.b=4d\quad B.b=-4d\quad C.a=4c\quad D.a=-4c$
+    %例12
+    \item 设$f(x)$对一切正数$x_1$，$x_2$有$f(x_1,x_2)=f(x_1)+f(x_2)$，且$f(x)$在$x=1$处连续，证明$f(x)$在$(0,+\int)$上有唯一根。
+    %例13
+    \item 设$f(x)$在$[0,+\infty)$上可导，$f(0)<0$，$f^{\prime}(x)\geq k>0$，（$k$为常数），证明方程$f(x)=0$在$(0,+\infty)$上有唯一根。
+    %例14
+    \item 设$f(x)$在$[a,+\infty)$上二阶可导，$f(a)<0$，$f^\prime(a)>0$当$x>a$时,$f^{\prime\prime}(x)>0$,证明方程$f(x)$在$(a,+\infty)$上存在唯一根。
+    %例15
+    \item 设$x_1>0$，当$n\geq1$时，$x_{n+1}=\frac{1}{2}(x_n+\frac{a}{x_n})$，$a$为正常数，证明数列$\{x_n\}$存在极限并求其极限。
+    %例16
+    \item 设$a>0$，$x_1>\sqrt{a}$，当$n\geq1$时，$x_{n+1}=\sqrt{a+x_n}$，证明$\{x_n\}$存在极限并求出其极限。
+    %例17
+    \item 设$x_1>0$，当$n\geq1$时，$x_{n+1}=\sqrt{a x_n}$，证明$\{x_n\}$存在极限并求出其极限。
+    %例18
+    \item 设$x_1=2$，当$n\geq1$时，$x_{n+1}=1+\frac{x_n}{1+x_n}$，证明$\{x_n\}$存在极限并求出其极限。
+    %例19
+    \item 设$0<x_1<3$，当$n\geq1$时，$x_{n+1}=\sqrt{x_n(3-x_n)}$，证明$\{x_n\}$存在极限并求出其极限。
+    %例20
+    \item 设$0<a<1$，$x_1 =\frac{a}{2}$，当$n\geq1$时，$x_{n+1}=\frac{a+x_n^2}{2}$，证明$\{x_n\}$存在极限并求出其极限。
+    %例21
+    \item 设$a_0\geq b_0>0$，当$n\geq 0$时，$a_{n+1}=\frac{a_n+b_n}{2}$，$b_{n+1}=\frac{2 a_n b_n}{a_n + b_n}$，证明数列$\{a_n\}$与$\{b_n\}$的极限均存在，并求$\lim\limits_{n\to \infty}a_n$，$\lim\limits_{n \to \infty}b_n$。
+    %例22
+    \item 设$x_0>0$，$y_0>0$，当$n\geq 0$时，$x_{n+1}=\sqrt{x_n y_n}$，$y_{n+1}=\frac{x_n + y_n}{2}$，证明数列$\{x_n\}$与$\{y_n\}$的极限均存在，且$\lim\limits_{n\to \infty}x_n=\lim\limits_{n \to \infty}y_n$。
+    %例23
+    \item 设$x_1=a$，$x_2=b$，$a<b$，当$n\geq 2$时，$x_{n+1}=\frac{x_n +x_{n-1}}{2}$，求
+        \begin{compactenum}[(1)]
+                \item $y_n=x_n-x_{n-1}$，$n\geq 2$；
+                \item $\sum\limits_{k=2}^{n}y_k$；
+                \item $\lim\limits_{n \to \infty}x_n$。
+            \end{compactenum}
+    %例24
+    \item 设$x_1=1$，$x_2=2$，当$n\geq 2$时，$x_{n+1}=\sqrt{x_n x_{n+1}}$，求
+        \begin{compactenum}[(1)]
+                \item $y_n=\ln x_n - \ln x_{n-1}$，$n\geq 2$；
+                \item $\sum\limits_{k=2}^{n}y_k$；
+                \item $\lim\limits_{n \to \infty}x_n$。
+            \end{compactenum}
+    %例25
+    \item 设$n$为正整数，且$n \pi \leq x < (n+1) \pi$，
+            \begin{compactenum}[(1)]
+                \item 证明$2n\leq \int_{0}^{x}\left|\sin t\right| dt < 2(n+1)$；
+                \item 求$\lim\limits_{x\to +\infty}\frac{\int_{0}^{x}\left|\sin t\right|dt}{x}$。
+            \end{compactenum}
+    %例26
+    \item 当$0<x<1$时，证明$\sin \frac{\pi x}{2} > x$；又设$0<x_1<1$，当$n\geq 1$时，$x_{n+1}=\sin\frac{\pi x_n}{2}$，证明数列$\{x_n\}$存在极限并求出其极限。
+    %例27
+    \item 证明方程$x^n+x^{n+1}+\dots+x^2+x=1$，$(n\geq 2)$在$(0,1)$上存在唯一根，并将此根记为$x_n$，证明数列$\{x_n\}$存在极限并求出其极限。
+\end{enumerate}
+% section 经典例题 (end)

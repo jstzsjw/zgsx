@@ -1,0 +1,60 @@
+\chapter{导数与微分}
+\section{考点解析} % (fold)
+\label{sec:考点解析}
+
+% section 考点解析 (end)
+
+\section{经典例题} % (fold)
+\label{sec:经典例题}
+
+\begin{enumerate}[{例}1.]
+    \item 设$f(x)$在$x_0$处二阶可导，求$\lim\limits_{h \to 0}\frac{f(x_0+h)+f(x_0-h)-2f(x_0)}{h^2}$。
+        %例题1
+    \item 设$f(0)=0$，$f^{\prime}(0)=1$，$f^{\prime\prime}(0)=2$，求$\lim\limits_{x \to 0}\frac{f(x)-x}{x^2}$。
+        %例题2
+    \item 设$f(x)=\begin{cases}\frac{\sin x}{x} & x \neq 0\\
+                               1 & x = 0
+                           \end{cases}$，求$f^{\prime}(0)$，$f^{\prime\prime}(0)$。
+        %例题3
+    \item 设$f(x)=\begin{cases}\frac{1}{x}-\frac{1}{e^x -1} & x \neq 0\\
+                                                    \frac{1}{2} & x = 0
+                    \end{cases}$，试讨论$f(x)$在$x=0$处的连续性、可导性。
+        %例题4
+    \item $f(x)$在$x=0$处二阶可导，$f(0)=0$，$g(x)=\begin{cases}\frac{f(x)}{x} & x \neq 0\\
+                                                                f^{\prime}(0) & x = 0
+                                                            \end{cases}$，证明$g^{\prime}(x)$在$x=0$处连续。
+        %例题5
+    \item 设$f(x)$在$(-\infty,+\infty)$上连续，$\lim\limits_{x \to 0}\frac{f(x)}{x}=A$，$A$为常数，$\varphi(x)=\int_0^1 f(xt)dt$，试讨论$\varphi^{\prime}(x)$的连续性。
+        %例题6
+    \item 设$f(x)$在$(-\infty,+\infty)$上有定义，对任意$x$、$y$有$f(x+y)=e^xf(y)+e^yf(x)$，且$f(x)$在$x=0$处可导，$f^{\prime}(0)=2$，证明$f(x)$在任一点处可导，并求$f(x)$。
+        %例题7
+    \item 设$f(x)$在$(-\infty,+\infty)$上连续，$f(1)=3$，对任意$x>0$，$y>0$有$\int_1^{xy}f(x)dt=x\int_1^y f(t)dt+y\int_1^x f(t)dt$，求$f(x)$。
+        %例题8
+    \item 设$f(x)=\begin{cases}x^3 \sin \frac{1}{x} & x\neq 0\\
+                                0 & x=0
+                \end{cases}$，求使得$f^{(n)}(0)$存在的最大$n$。
+        %例题9
+    \item 设$f(x)=3x^3 + x^2 \left|x\right|$，求使得$f^{(n)}(0)$存在的最大$n$。
+        %例题10
+    \item 设$y=(2x+3)^3(3x+2)^2$，求$y^{(5)}$，$y^{(6)}$。
+        %例题11
+    \item 设$y=\frac{x^4-x^3+2x^2-3x}{x-1}$，求$y^{(5)}$。
+        %例题12
+    \item 设$y=y(x)$由方程$y=\cos x +xe^y$所确定，求$y^{\prime}(0)$，$y^{\prime\prime}(0)$。
+        %例题13
+    \item 设$y=y(x)$由方程$2y^3-2y^2+2xy-x^2 =1$所确定，求$f(x)$的驻点，并判别该驻点是否为极值点。
+        %例题14
+    \item 通过变换$x=\sin t$化简方程$(1-x^2)\frac{d^2y}{dx^2}-x\frac{dy}{dx}+a^2 y=0$，并求原方程的通解。
+        %例题15
+    \item 通过变换$x=\frac{u}{\cos x}$化简方程$\cos x \frac{d^2 y}{d x^2}-2\sin x \frac{dy}{dx}+3y \cos x=e^x$，并求原方程的通解。
+        %例题16
+    \item 设$f(x)=y(x)$满足方程$y^{\prime\prime}+(x+e^{2y})y^{\prime 3}=0$，$y^{\prime}\neq 0$，试将该方程化为$y=y(x)$的反函数$x=x(y)$满足的微分方程，并求原方程的通解。
+        %例题17
+\end{enumerate}
+% section 经典例题 (end)
+\section{习题} % (fold)
+\label{sec:习题}
+\begin{enumerate}
+    \item
+\end{enumerate}
+% section 习题 (end)

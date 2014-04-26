@@ -1,0 +1,56 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置版面控制%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper, 12pt, notitlepage, onecolumn, oneside ,fleqn ,twoside]{book}
+\usepackage[colorlinks,
+            linkcolor=red,
+            anchorcolor=blue,
+            citecolor=green,
+            bookmarks]{hyperref}
+            \hypersetup{pdftitle={曾哥考研数学班课堂例题},pdfauthor={帅靖文},pdfkeywords={考研、数学、曾哥},pdfsubject={考研数学},pdfstartview={FitV}}
+%\usepackage[top=1.2in,bottom=1.2in,left=1.2in,right=1in]{geometry}                          % 设置版面，纸张空距
+\usepackage{indentfirst}                 % 用于首行缩进
+\setlength{\parindent}{2em}              % 设置首行缩进2字符
+\XeTeXlinebreaklocale``zh''                                                 % 设置中文换行
+\XeTeXlinebreakskip=0pt plus 1pt minus 0.1pt                                % 设置中文换行
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置字体%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[CJKchecksingle, CJKnumber]{xeCJK}                 % 用于字体
+\setCJKmainfont[BoldFont={Adobe Heiti Std},ItalicFont={Adobe Kaiti Std}]{Adobe Song Std}     % 设置中文/粗体/斜体/主要字体
+\setCJKsansfont{Adobe Heiti Std}         % 设置无衬线中文字体
+\setCJKmonofont{Adobe Fangsong Std}      % 设置等宽中文字体
+\punctstyle{hangmobanjiao}               % 设置行末半角
+\setmainfont[Mapping=tex-text]{Times New Roman}         % 设置衬线英文字体
+\setsansfont[Mapping=tex-text]{Tahoma}                  % 设置无衬线英文字体
+\setmonofont{Courier New}                               % 设置等款英文字体
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置图像%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}                    % 用于图像编号
+\newcommand{\figref}[1]{Fig. \ref{#1}}
+\usepackage{tikz}
+\usepackage{verbatim}
+%%%%%%%%%%%%%%%%%%%%%%%%%%公式%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eqsref}[1]{Eq.\eqref{#1}}  %用于公式编号
+\newcommand{\myd}{\;\mathrm{d}} %积分的dx
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%设置数学公式%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath}                     % AMS LaTeX宏包
+\usepackage{latexsym}                       %数学符号
+\usepackage{amssymb}                       %数学符号
+\usepackage{amsfonts}                       %数学符号
+\setlength{\mathindent}{0pt}             % 与fleqn配合，使公式靠左显示
+%\DeclareMathSizes{12}{12}{10}{10}        % 改变公式大小文本字号、普通公式字号、第一级上下标、第二级上下标
+\usepackage{caption}                     % 用来设置字体大小 
+\usepackage{pifont}
+\usepackage{bbding}
+\allowdisplaybreaks
+\usepackage{float}
+\renewcommand{\today}{\number\year 年 \number\month 月 \number\day 日}     %设置日期为中文方式
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%水印%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\usepackage{draftwatermark}
+%\SetWatermarkText{SJW}%设置水印文字
+%\SetWatermarkLightness{0.9}%设置水印亮度
+%\SetWatermarkScale{2}%设置水印大小
+%\usepackage[contents=SJW, color=gray, opacity=0.8,]{background}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%表格%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow} %数字表格
+\usepackage{booktabs} %跨行跨列
+\usepackage{colortbl} %彩色表格
+\usepackage{paralist} %紧缩式列表
