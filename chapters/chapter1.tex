@@ -371,7 +371,7 @@
             sol:&x_{n+1}-x_n=\frac{1}{2}\Big(x_n+\frac{a}x_n\Big)-x_n=\frac{a-x_n ^2}{2x_n}\\
                 &x_{n+1}=\frac{1}{2}\Big(x_n+\frac{a}{x_n}\Big)\geq \sqrt{a}\\
                 &\therefore x_{n+1}-x_n\leq 0\\
-                &\therefore n\geq 2\mbox{时}x_n\mbox{单调递减，有下界为}\sqrt{a}\Rightarrow \lim_{n \to \infty}x_n\mbox{存在}\\
+                &\therefore n\geq 2\mbox{时}\{x_n\}\mbox{单调不增，有下界为}\sqrt{a}\Rightarrow \lim_{n \to \infty}x_n\mbox{存在}\\
                 &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，在}x_{n+1}=\frac{1}{2}\Big(x_n+\frac{a}{x_n}\Big)\mbox{两边令}n\to \infty\\
                 &\mbox{则有}A=\frac{1}{2}\Big(A+\frac{a}{A}\Big)\Rightarrow A=\sqrt{a}\\
                 &\therefore \lim_{n \to \infty}x_n=\sqrt{a}
@@ -386,7 +386,7 @@
                 &x_{n+1}=\frac{a}{x_{n+a}}+\frac{x_n}{x_{n+1}}\leq \frac{a}{x_1}+1=\sqrt{a}+1\\
                 &\mbox{显然}x_{n+1}>x_n\mbox{，}\{x_n\}\mbox{单调增加，有上界为}\sqrt{a}+1\Rightarrow\lim_{n \to \infty}x_n\mbox{存在}\\
                 &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，在}x_{n+1}^2=a+x_n\mbox{两边令}n\to \infty\\
-                &\mbox{则有}A^2=a+A\Rightarrow A=\frac{1}{2}\textpm\sqrt{\frac{1}{4}+a}\\
+                &\mbox{则有}A^2=a+A\Rightarrow A=\frac{1}{2}\pm\sqrt{\frac{1}{4}+a}\\
                 &\mbox{又}\because A\geq \sqrt{a}>0\quad\therefore A=\frac{1}{2}+\sqrt{\frac{1}{4}+a}\\
                 &\therefore \lim_{n \to \infty}x_n=\frac{1}{2}+\sqrt{\frac{1}{4}+a}
         \end{align*}
@@ -420,8 +420,29 @@
         $\therefore$综上所述，数列$\{x_n\}$存在极限，且$\lim\limits_{n \to \infty}x_n=a$
     %例18
     \item 设$x_1=2$，当$n\geq1$时，$x_{n+1}=1+\frac{x_n}{1+x_n}$，证明$\{x_n\}$存在极限并求出其极限。
+        \begin{align*}
+            sol:&x_{n+1}-x_n=1+\frac{x_n}{x_{n+1}}-1-\frac{x_{n-1}}{1+x_{n-1}}\\
+                &=\frac{x_n (1+x_{n-1})-(1+x_n)x_{n-1}}{(1+x_n)(1+x_{n-1})}\\
+                &\because x_2=1+\frac{2}{1+2}=1\frac{2}{3}<x_1\\
+                &\therefore x_{n+1}-x_n<0\mbox{，即}\{x_n\}\mbox{单调递减}\\
+                &\because x_{n+1}>1\quad \therefore\mbox{有下界为1}\Rightarrow \lim_{n \to \infty}x_n\mbox{存在}\\
+                &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，对}x_{n+1}=1+\frac{x_n}{1+x_n}\mbox{两边令}n\to \infty\\
+                &\therefore A=1+\frac{A}{1+A}\Rightarrow A=\frac{1\pm\sqrt{5}}{2}\\
+                &\because A>1\quad\therefore A=\frac{1+\sqrt{5}}{2}\\
+                &\therefore \lim_{n \to \infty}x_n=\frac{1+\sqrt{5}}{2}
+        \end{align*}
     %例19
     \item 设$0<x_1<3$，当$n\geq1$时，$x_{n+1}=\sqrt{x_n(3-x_n)}$，证明$\{x_n\}$存在极限并求出其极限。
+        \begin{align*}
+            sol:&\frac{x_{n+1}}{x_n}=\frac{\sqrt{x_n(3-x_n)}}{x_n}=\sqrt{\frac{3}{x_n}-1}\\
+                &x_{n+1}=\sqrt{x_n(3-x_n)}\leq \frac{3}{2}\\
+                &or\quad x_{n+1}^2-\frac{9}{4}=-x_n^2+3x_n-\frac{9}{4}=-(x_n-\frac{3}{2})^2\leq 0\\
+                &\therefore\mbox{当}n\geq 2\mbox{时}\frac{x_{n+1}}{x_n}>1\mbox{，且}x_{n+1}\leq \frac{3}{2}\\
+                &\mbox{即}\{x_n\}\mbox{单调不减，且有上界为}\frac{3}{2}\Rightarrow \lim_{n \to \infty}x_n\mbox{存在}\\
+                &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，对}x_{n+1}=\sqrt{x_n(3-x_n}\mbox{两边令}n\to \infty\\
+                &\therefore A=\sqrt{A(3-A)}\Rightarrow A=0\quad or \quad A=\frac{3}{2}\quad \because x_2>0 \therefore A=\frac{3}{2}\\
+                &\therefore \lim_{n \to \infty}x_n=\frac{3}{2}
+        \end{align*}
     %例20
     \item 设$0<a<1$，$x_1 =\frac{a}{2}$，当$n\geq1$时，$x_{n+1}=\frac{a+x_n^2}{2}$，证明$\{x_n\}$存在极限并求出其极限。
     %例21

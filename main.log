@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.11)  27 APR 2014 15:10
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.11)  27 APR 2014 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1608,14 +1608,7 @@ n/12 ，| $[] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/
 2 ) = 1$ \EU1/AdobeSongStd(0)/m/n/12 且 $[] [][][][] \OT1/cmr/m/n/12 =
  []
 
-[8] [9] [10] [11] [12] [13]
-
-LaTeX Warning: Command \textpm invalid in math mode on input line 392.
-
-
-LaTeX Warning: Command \textpm invalid in math mode on input line 392.
-
-[14] [15]) [16]
+[8] [9] [10] [11] [12] [13] [14] [15]) [16]
 \openout2 = `chapters/chapter2.aux'.
 
  (./chapters/chapter2.tex
