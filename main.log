@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.11)  27 APR 2014 13:30
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.11)  27 APR 2014 14:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1608,47 +1608,54 @@ n/12 ，| $[] \OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/
 2 ) = 1$ \EU1/AdobeSongStd(0)/m/n/12 且 $[] [][][][] \OT1/cmr/m/n/12 =
  []
 
-[8] [9] [10] [11] [12] [13]) [14]
+[8] [9] [10] [11] [12]
+
+LaTeX Warning: Command \textpm invalid in math mode on input line 390.
+
+
+LaTeX Warning: Command \textpm invalid in math mode on input line 390.
+
+[13] [14]) [15]
 \openout2 = `chapters/chapter2.aux'.
 
- (./chapters/chapter2.tex
+ (./chapters/chapter2.tex [16
+
+
+
+]
 Chapter 2.
-[15
-
-
-
-]) [16]
+[17]) [18]
 \openout2 = `chapters/chapter3.aux'.
 
  (./chapters/chapter3.tex
 Chapter 3.
-[17
+[19
 
 
 
-]) [18]
+]) [20]
 \openout2 = `part/part2.aux'.
 
- (./part/part2.tex [19
-
-
-
-] [20])
-\openout2 = `part/part3.aux'.
-
- (./part/part3.tex [21
+ (./part/part2.tex [21
 
 
 
 ] [22])
-\openout2 = `part/part4.aux'.
+\openout2 = `part/part3.aux'.
 
-
-(./part/part4.tex [23
+ (./part/part3.tex [23
 
 
 
 ] [24])
+\openout2 = `part/part4.aux'.
+
+
+(./part/part4.tex [25
+
+
+
+] [26])
 \openout2 = `exercises/exercise1.aux'.
 
  (./exercises/exercise1.tex
@@ -1664,17 +1671,17 @@ r/m/n/12 ))$\EU1/AdobeSongStd(0)/m/n/12 ，| $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 
 obeSongStd(0)/m/n/12 ，|
  []
 
-[25
+[27
 
 
 
-] [26]) [27]
+] [28]) [29]
 \openout2 = `exercises/exercise2.aux'.
 
- (./exercises/exercise2.tex [28
+ (./exercises/exercise2.tex [30
 
 
-] [29]) [30]
+] [31]) [32]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 23.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 23.
  (./main.aux
@@ -1698,4 +1705,4 @@ Here is how much of TeX's memory you used:
  1144 hyphenation exceptions out of 8191
  60i,18n,57p,738b,693s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (30 pages).
+Output written on main.pdf (32 pages).

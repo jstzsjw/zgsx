@@ -341,12 +341,53 @@
         \end{align*}
     %例13
     \item 设$f(x)$在$[0,+\infty)$上可导，$f(0)<0$，$f^{\prime}(x)\geq k>0$，（$k$为常数），证明方程$f(x)=0$在$(0,+\infty)$上有唯一根。
+        \begin{align*}
+            sol:&\mbox{构造}F(x)=f(x)-f(0)-kx\\
+                &F^{\prime}(x)=f^{\prime}(x)-k\geq 0\\
+                &\mbox{又}\because F(0)=0\\
+                &\therefore F(x)\geq F(0)=0\\
+                &\therefore f(x)\geq f(0)+kx\\
+                &\because\mbox{当}f(0)+kx_0=0\Rightarrow x_0=-\frac{f(0)}{k}>0\mbox{时}f(-\frac{f(0)}{k})\geq 0\\
+                &\mbox{且}f(0)<0,f^{\prime}(x)\geq k>0\\
+                &\therefore f(x)=0\mbox{在}(0,+\infty)\mbox{上有唯一根}
+        \end{align*}
     %例14
     \item 设$f(x)$在$[a,+\infty)$上二阶可导，$f(a)<0$，$f^\prime(a)>0$当$x>a$时,$f^{\prime\prime}(x)>0$,证明方程$f(x)$在$(a,+\infty)$上存在唯一根。
+        \begin{align*}
+            sol:&\because f^{\prime\prime}(x)>0\\
+                &\therefore \mbox{当}x\in (a,+\infty)\mbox{时}f^{\prime}(x)>f^{\prime}(a)\\
+                &\mbox{构造}F(x)=f(x)-f(a)-f^{\prime}(a)x\\
+                &F^{\prime}(x)=f^{\prime}(x)-f^{\prime}(a)>0\quad(x\in(a,+\infty))\\
+                &\therefore f(x)-f(a)-f^{\prime}(a)x>-f^{\prime}(a)a\\
+                &f(x)>f(a)+f^{\prime}(a)x=f^{\prime}(a)a\\
+                &\mbox{令}f(a)+f^{\prime}(a)x_0-f^{\prime}(a)a=0\Rightarrow x_0=a-\frac{f(a)}{f^{\prime}(a)}>a\\
+                &\therefore f(x_0)>0\\
+                &\mbox{又}\because f(a)<0,f^{\prime}(x)>f^{\prime}(a)>0\\
+                &\therefore f(x)=0\mbox{在}(a,+\infty)\mbox{上存在唯一跟}
+        \end{align*}
     %例15
     \item 设$x_1>0$，当$n\geq1$时，$x_{n+1}=\frac{1}{2}(x_n+\frac{a}{x_n})$，$a$为正常数，证明数列$\{x_n\}$存在极限并求其极限。
+        \begin{align*}
+            sol:&x_{n+1}-x_n=\frac{1}{2}\Big(x_n+\frac{a}x_n\Big)-x_n=\frac{a-x_n ^2}{2x_n}\\
+                &x_{n+1}=\frac{1}{2}\Big(x_n+\frac{a}{x_n}\Big)\geq \sqrt{a}\\
+                &\therefore x_{n+1}-x_n\leq 0\\
+                &\therefore n\geq 2\mbox{时}x_n\mbox{单调递减，有下界为}\sqrt{a}\Rightarrow \lim_{n \to \infty}x_n\mbox{存在}\\
+                &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，在}x_{n+1}=\frac{1}{2}\Big(x_n+\frac{a}{x_n}\Big)\mbox{两边令}n\to \infty\\
+                &\mbox{则有}A=\frac{1}{2}\Big(A+\frac{a}{A}\Big)\Rightarrow A=\sqrt{a}
+        \end{align*}
     %例16
     \item 设$a>0$，$x_1>\sqrt{a}$，当$n\geq1$时，$x_{n+1}=\sqrt{a+x_n}$，证明$\{x_n\}$存在极限并求出其极限。
+        \begin{align*}
+            sol:&x_{n+a}^2=a+x_n\\
+                &\therefore x_{n+1}^2-x_n^2=x_n-x_{n-1}\\
+                &\because x_3^2-x_2^2=x_2-x_1=\sqrt{a+\sqrt{a}}-\sqrt{a}>0\\
+                &\therefore x_3>x_2\\
+                &x_{n+1}=\frac{a}{x_{n+a}}+\frac{x_n}{x_{n+1}}\leq \frac{a}{x_1}+1=\sqrt{a}+1\\
+                &\mbox{显然}x_{n+1}>x_n\mbox{，}\{x_n\}\mbox{单调增加，有上界为}\sqrt{a}+1\Rightarrow\lim_{n \to \infty}x_n\mbox{存在}\\
+                &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，在}x_{n+1}^2=a+x_n\mbox{两边令}n\to \infty\\
+                &\mbox{则有}A^2=a+A\Rightarrow A=\frac{1}{2}\textpm\sqrt{\frac{1}{4}+a}\\
+                &\mbox{又}\because A\geq \sqrt{a}>0\quad\therefore A=\frac{1}{2}+\sqrt{\frac{1}{4}+a}
+        \end{align*}
     %例17
     \item 设$x_1>0$，当$n\geq1$时，$x_{n+1}=\sqrt{a x_n}$，证明$\{x_n\}$存在极限并求出其极限。
     %例18
