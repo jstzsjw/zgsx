@@ -373,7 +373,8 @@
                 &\therefore x_{n+1}-x_n\leq 0\\
                 &\therefore n\geq 2\mbox{时}x_n\mbox{单调递减，有下界为}\sqrt{a}\Rightarrow \lim_{n \to \infty}x_n\mbox{存在}\\
                 &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，在}x_{n+1}=\frac{1}{2}\Big(x_n+\frac{a}{x_n}\Big)\mbox{两边令}n\to \infty\\
-                &\mbox{则有}A=\frac{1}{2}\Big(A+\frac{a}{A}\Big)\Rightarrow A=\sqrt{a}
+                &\mbox{则有}A=\frac{1}{2}\Big(A+\frac{a}{A}\Big)\Rightarrow A=\sqrt{a}\\
+                &\therefore \lim_{n \to \infty}x_n=\sqrt{a}
         \end{align*}
     %例16
     \item 设$a>0$，$x_1>\sqrt{a}$，当$n\geq1$时，$x_{n+1}=\sqrt{a+x_n}$，证明$\{x_n\}$存在极限并求出其极限。
@@ -386,10 +387,37 @@
                 &\mbox{显然}x_{n+1}>x_n\mbox{，}\{x_n\}\mbox{单调增加，有上界为}\sqrt{a}+1\Rightarrow\lim_{n \to \infty}x_n\mbox{存在}\\
                 &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，在}x_{n+1}^2=a+x_n\mbox{两边令}n\to \infty\\
                 &\mbox{则有}A^2=a+A\Rightarrow A=\frac{1}{2}\textpm\sqrt{\frac{1}{4}+a}\\
-                &\mbox{又}\because A\geq \sqrt{a}>0\quad\therefore A=\frac{1}{2}+\sqrt{\frac{1}{4}+a}
+                &\mbox{又}\because A\geq \sqrt{a}>0\quad\therefore A=\frac{1}{2}+\sqrt{\frac{1}{4}+a}\\
+                &\therefore \lim_{n \to \infty}x_n=\frac{1}{2}+\sqrt{\frac{1}{4}+a}
         \end{align*}
     %例17
     \item 设$x_1>0$，当$n\geq1$时，$x_{n+1}=\sqrt{a x_n}$，证明$\{x_n\}$存在极限并求出其极限。
+        \begin{align*}
+            sol:x_{n+1}-x_n&=\sqrt{ax_n}-x_n\\
+                &=\sqrt{x_n}(\sqrt{a}-\sqrt{x_n})\\
+                x_{n+1}-a&=\sqrt{ax_n}-a\\
+                &=\sqrt{a}(\sqrt{x_n}-\sqrt{a})
+        \end{align*}
+        \begin{enumerate}[(i)]
+            \item 当$x_1<a$时
+                \begin{align*}
+                    &\because\sqrt{x_1}-\sqrt{a}<0\therefore x_{n+1}-x_n>0\mbox{，且}x_{n+1}-a<0\Rightarrow x_{n+1}<a\\
+                    &\therefore \{x_n\}\mbox{单调递增，且上界为}a\Rightarrow\lim_{n \to \infty}x_n\mbox{存在}\\
+                    &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，在}x_{n+1}=\sqrt{ax_n}\mbox{两边令}n\to\infty\\
+                    &\mbox{则有}A=\sqrt{aA}\Rightarrow A=a\\
+                    &\therefore\lim_{n \to \infty}x_n=a
+                \end{align*}
+            \item 当$x_1>a$时
+                \begin{align*}
+                    &\because\sqrt{x_1}-\sqrt{a}>0\therefore x_{n+1}-x_n<0\mbox{，且}x_{n+1}-a>0\Rightarrow x_{n+1}>a\\
+                    &\therefore \{x_n\}\mbox{单调递减，且下界为}a\Rightarrow\lim_{n \to \infty}x_n\mbox{存在}\\
+                    &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，在}x_{n+1}=\sqrt{ax_n}\mbox{两边令}n\to\infty\\
+                    &\mbox{则有}A=\sqrt{aA}\Rightarrow A=a\\
+                    &\therefore\lim_{n \to \infty}x_n=a
+                \end{align*}
+            \item 当$x_1=a$时，$x_{n+1}=x_n=a\Rightarrow \lim_{n \to \infty}x_n=a$
+        \end{enumerate}
+        $\therefore$综上所述，数列$\{x_n\}$存在极限，且$\lim\limits_{n \to \infty}x_n=a$
     %例18
     \item 设$x_1=2$，当$n\geq1$时，$x_{n+1}=1+\frac{x_n}{1+x_n}$，证明$\{x_n\}$存在极限并求出其极限。
     %例19
