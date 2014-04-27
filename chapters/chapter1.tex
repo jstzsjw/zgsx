@@ -439,7 +439,7 @@
                 &or\quad x_{n+1}^2-\frac{9}{4}=-x_n^2+3x_n-\frac{9}{4}=-(x_n-\frac{3}{2})^2\leq 0\\
                 &\therefore\mbox{当}n\geq 2\mbox{时}\frac{x_{n+1}}{x_n}>1\mbox{，且}x_{n+1}\leq \frac{3}{2}\\
                 &\mbox{即}\{x_n\}\mbox{单调不减，且有上界为}\frac{3}{2}\Rightarrow \lim_{n \to \infty}x_n\mbox{存在}\\
-                &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，对}x_{n+1}=\sqrt{x_n(3-x_n}\mbox{两边令}n\to \infty\\
+                &\mbox{设}\lim_{n \to \infty}x_n=A\mbox{，对}x_{n+1}=\sqrt{x_n(3-x_n)}\mbox{两边令}n\to \infty\\
                 &\therefore A=\sqrt{A(3-A)}\Rightarrow A=0\quad or \quad A=\frac{3}{2}\quad \because x_2>0 \therefore A=\frac{3}{2}\\
                 &\therefore \lim_{n \to \infty}x_n=\frac{3}{2}
         \end{align*}
@@ -447,8 +447,34 @@
     \item 设$0<a<1$，$x_1 =\frac{a}{2}$，当$n\geq1$时，$x_{n+1}=\frac{a+x_n^2}{2}$，证明$\{x_n\}$存在极限并求出其极限。
     %例21
     \item 设$a_0\geq b_0>0$，当$n\geq 0$时，$a_{n+1}=\frac{a_n+b_n}{2}$，$b_{n+1}=\frac{2 a_n b_n}{a_n + b_n}$，证明数列$\{a_n\}$与$\{b_n\}$的极限均存在，并求$\lim\limits_{n\to \infty}a_n$，$\lim\limits_{n \to \infty}b_n$。
+        \begin{align*}
+            sol:&a_{n+1}-a_n=\frac{b_n-a_n}{2}\quad\frac{b_{n+1}}{b_n}=\frac{2a_n}{1_n+b_n}\\
+                &\frac{a_{n+1}}{b_{n+1}}=\frac{(a_n+b_n)^2}{4a_nb_n}\geq\frac{(2\sqrt{a_nb_n})^2}{4a_nb_n}=1\\
+                &\therefore a_n\geq b_n\\
+                &\therefore \{a_n\}\mbox{为单调不增，}\{b_n\}\mbox{为单调不减，且}a_0\geq a_n\geq b_n\geq b_0\\
+                &\Rightarrow\lim_{n\to \infty}a_n,\lim_{n\to \infty}b_n\mbox{存在}\mbox{，设}\lim_{n\to \infty}a_n=A,\lim_{n\to \infty}b_n=B\\
+                &\mbox{则分别对}a_{n+1}=\frac{a_n+b_n}{2},b_{n+1}=\frac{2a_nb_n}{a_n+b_n}\mbox{两边令}n\to\infty\\
+                &\Rightarrow\begin{cases}A=\frac{A+B}{2}\\
+                                        B=\frac{2AB}{A+B}
+                        \end{cases}\Rightarrow A=B\\
+                &\because a_{n+1}b_{n+1}=a_nb_n=\dots=a_0b_0\\
+                &\therefore AB=a_0b_0\Rightarrow A=B=\sqrt{a_0b_0}\\
+                &\therefore \lim_{n\to \infty}a_n=\lim_{n\to\infty}b_n=\sqrt{a_0b_0}
+        \end{align*}
     %例22
     \item 设$x_0>0$，$y_0>0$，当$n\geq 0$时，$x_{n+1}=\sqrt{x_n y_n}$，$y_{n+1}=\frac{x_n + y_n}{2}$，证明数列$\{x_n\}$与$\{y_n\}$的极限均存在，且$\lim\limits_{n\to \infty}x_n=\lim\limits_{n \to \infty}y_n$。
+        \begin{align*}
+            sol:&\frac{x_{n+1}}{x_n}=\sqrt{\frac{y_n}{x_n}}\quad, y_{n+1}-y_n=\frac{x_n-y_n}{2}\\
+                &\because y_{n+1}=\frac{1}{2}(x_n+y_n)\geq\sqrt{x_ny_n}=x_{n+1}\\
+                &\therefore \{x_n\}\mbox{单调不减，}\{y_n\}\mbox{单调不增}\\
+                &\because y_0\geq y_n\geq x_n \geq x_0\Rightarrow \lim_{n\to\infty}x_n,\lim_{n\to\infty}y_n\mbox{存在}\\
+                &\mbox{设}\lim_{n\to\infty}x_n=X,\lim_{n\to\infty}y_n=Y\mbox{，则对}x_{n+1}=\sqrt{x_ny_n},\\
+                &y_{n+1}=\frac{x_n+y_n}{2}\mbox{两边分别令}n\to\infty\\
+                &\Rightarrow\begin{cases}X=\sqrt{XY}\\
+                                        Y=\frac{X+Y}{2}
+                            \end{cases}\Rightarrow X=Y\\
+                &\mbox{即}\lim_{n\to\infty}x_n=\lim_{n\to\infty}y_n
+        \end{align*}
     %例23
     \item 设$x_1=a$，$x_2=b$，$a<b$，当$n\geq 2$时，$x_{n+1}=\frac{x_n +x_{n-1}}{2}$，求
         \begin{compactenum}[(1)]
@@ -456,6 +482,29 @@
                 \item $\sum\limits_{k=2}^{n}y_k$；
                 \item $\lim\limits_{n \to \infty}x_n$。
             \end{compactenum}
+        $sol:$
+        \begin{enumerate}[(1)]
+            \item 
+                \begin{align*}
+                    &x_{n+1}-x_n=\frac{x_n+x_{n+1}}{2}-x_n=-\frac{1}{2}(x_n-x_{n-1})\\
+                    &\therefore y_{n+1}=-\frac{1}{2}y_n\\
+                    &y_2=x_2-x_1=b-a\Rightarrow y_n=(-\frac{1}{2})^{n-2}(b-a)
+                \end{align*}
+            \item
+                \begin{align*}
+                    \sum_{k=2}^n y_k&=\sum_{k=2}^n(b-a)(-\frac{1}{2})^{k-2}\\
+                    &=(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{1-(-\frac{1}{2})}\\
+                    &=(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}
+                \end{align*}
+            \item
+                \begin{align*}
+                    x_n&=y_n+y_{n-1}+\dots+y_2+x_1\\
+                    &=\sum_{k=2}^ny_k+x_1\\
+                    &=(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}+x_1\\
+                    \therefore\lim_{n\to\infty}x_n&=\lim_{n\to\infty}(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}+a\\
+                    &=\frac{2}{3}(b-a)+a=\frac{1}{3}(2b-a)
+                \end{align*}
+        \end{enumerate}
     %例24
     \item 设$x_1=1$，$x_2=2$，当$n\geq 2$时，$x_{n+1}=\sqrt{x_n x_{n+1}}$，求
         \begin{compactenum}[(1)]
@@ -463,15 +512,107 @@
                 \item $\sum\limits_{k=2}^{n}y_k$；
                 \item $\lim\limits_{n \to \infty}x_n$。
             \end{compactenum}
+        $sol:$
+        \begin{enumerate}[(1)]
+            \item
+                \begin{align*}
+                    &\ln x_{n+1}=\frac{1}{2}(\ln x_n+\ln x_{n-1})\\
+                    &\ln x_{n+1}-\ln x_n=-\frac{1}{2}(\ln x_n-\ln x_{n-1})\\
+                    &\therefore y_{n+1}=-\frac{1}{2}y_n\\
+                    &y_2=\ln 2\\
+                    &\therefore y_n=(-\frac{1}{2})^{n-2}\ln 2\\
+                \end{align*}
+            \item
+                \begin{align*}
+                    \sum_{k=2}^n y_k=\sum_{k=2}^n \ln 2(-\frac{1}{2})^{n-2}=\ln 2\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}
+                \end{align*}
+            \item
+                \begin{align*}
+                    &\lim_{n\to\infty}x_n=\exp\lim_{n\to\infty}\ln x_n\\
+                    &=\exp\lim_{n\to\infty}[y_n+y_{n-1}+\dots+y_2+\ln x_1]\\
+                    &=\exp\lim_{n\to\infty}\bigg[\sum_{k=2}^n y_k+\ln x_1\bigg]\\
+                    &=\exp\lim_{n\to\infty}\bigg[\ln 2\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}+\ln 1\bigg]\\
+                    &=\exp\Big[\ln 2\cdot\frac{2}{3}+0\Big]\\
+                    &=\sqrt[3]{4}
+                \end{align*}
+        \end{enumerate}
     %例25
     \item 设$n$为正整数，且$n \pi \leq x < (n+1) \pi$，
-            \begin{compactenum}[(1)]
-                \item 证明$2n\leq \int_{0}^{x}\left|\sin t\right| dt < 2(n+1)$；
-                \item 求$\lim\limits_{x\to +\infty}\frac{\int_{0}^{x}\left|\sin t\right|dt}{x}$。
-            \end{compactenum}
+        \begin{compactenum}[(1)]
+            \item 证明$2n\leq \int_{0}^{x}\left|\sin t\right| dt < 2(n+1)$；
+            \item 求$\lim\limits_{x\to +\infty}\frac{\int_{0}^{x}\left|\sin t\right|dt}{x}$。
+        \end{compactenum}
+        $sol:$
+        \begin{enumerate}[(1)]
+            \item
+                \begin{align*}
+                    \int_0^{n\pi}\left|\sin t\right|dt\leq&\int_0^x\left|\sin t\right|dt\leq\int_0^{(n+1)\pi}\left|\sin t\right|dt\\
+                    \Downarrow&\\
+                    2n\leq&\int_0^x\left|\sin t\right|dt\leq 2(n+1)\\
+                \end{align*}
+            \item
+                \begin{align*}
+                    \frac{2n}{x}\leq&\frac{\int_0^x\left|\sin t\right|dt}{x}\leq \frac{2(n+1)}{x}\\
+                    \lim_{n\to\infty}\frac{2n}{(n+1)\pi}\leq\frac{2n}{x}\leq&\frac{\int_0^x\left|\sin t\right|dt}{x}\leq \frac{2(n+1)}{x}\leq\lim_{n\to\infty}\frac{2(n+1)}{n\pi}\\
+                    \because\lim_{n\to\infty}\frac{2n}{(n+1)\pi}=\frac{2}{\pi}\\
+                    \lim_{n\to\infty}\frac{2(n+1)}{n\pi}=\frac{2}{\pi}\\
+                    \therefore\lim_{x\to\infty}\frac{\int_0^x \left|\sin t \right|dt}{x}=\frac{2}{\pi}
+                \end{align*}
+        \end{enumerate}
     %例26
     \item 当$0<x<1$时，证明$\sin \frac{\pi x}{2} > x$；又设$0<x_1<1$，当$n\geq 1$时，$x_{n+1}=\sin\frac{\pi x_n}{2}$，证明数列$\{x_n\}$存在极限并求出其极限。
+        $sol:$
+        \begin{enumerate}[(1)]
+            \item
+                \begin{align*}
+                    &\mbox{令}f(x)=\sin\frac{\pi x}{2}-x\\
+                    &f^{\prime}(x)=\frac{\pi}{2}\cos \frac{\pi x}{2}-1\\
+                    &\mbox{令}f^{\prime}(x_0)=0\Rightarrow x_0=\frac{2}{\pi}\arccos \frac{2}{\pi}\\
+                    &0<x<x_0\mbox{时}f^{\prime}(x)>0\quad\therefore f(x)>f(0)=0\\
+                    &x_0<x<1\mbox{时}f^{\prime}(x)>0\quad\therefore f(x)>f(0)=0\\
+                    &\therefore f(x)>0\quad(x\in(0,1))\\
+                    &\therefore\mbox{当}0<x<1\mbox{时，}\sin\frac[\pi x]{2}>x
+                \end{align*}
+            \item
+                \begin{align*}
+                    &\mbox{已知}0<x<1\\
+                    &\mbox{设}0<x_n<1\\
+                    &\mbox{则由(1)可知：}0<x_n<x_{n+1}=\frac{\pi x_n}{2}<1\\
+                    &\therefore 0<x_{n+1}<1\\
+                    &\therefore x_{n+1}>x_n\Rightarrow\{x_n\}\mbox{单调递增}\Rightarrow\lim_{n\to\infty}\mbox{存在}\\
+                    &\mbox{设}\lim_{n\to\infty}x_n=A\\
+                    &\mbox{则}A=\sin\frac{\pi A}{2}\quad\mbox{显然}A=1\\
+                    &\therefore\lim_{n\to\infty}x_n=1
+                \end{align*}
+        \end{enumerate}
     %例27
     \item 证明方程$x^n+x^{n+1}+\dots+x^2+x=1$，$(n\geq 2)$在$(0,1)$上存在唯一根，并将此根记为$x_n$，证明数列$\{x_n\}$存在极限并求出其极限。
-\end{enumerate}
+
+        $sol:$
+        \begin{enumerate}[(1)]
+            \item
+                \begin{align*}
+                    &\mbox{令}f(x)=x^n+x^{n-1}+\dots+x^2+x-1\\
+                    &f^{|prime}(x)=nx^{n-1}+(n-1)x^{n-2}+\dots+2x+1\\
+                    &x\in(0,1)\mbox{时}f^{\prime}(x)>0\mbox{显然成立}\\
+                    &\because f(0)=-1<0\quad f(1)=n-1>0\\
+                    &\therefore f(x)=0\mbox{在}(0,1)\mbox{上存在有唯一根，即}\\
+                    &x^n+x^{n-1}+\dots+x^2+x=1\quad(n\geq 2)\mbox{在}(0,1)\mbox{上存在唯一根}
+                \end{align*}
+            \item
+                \begin{align*}
+                    &n=2\mbox{时}x^2+x=1\Rightarrow x_2\\
+                    &n=3\mbox{时}x^3+x^2+x=1\Rightarrow x_3\\
+                    &n\mbox{时}x_n^n+x_n^{n-1}+\dots+x_n=1\Rightarrow x_n\\
+                    &n+1\mbox{时}x_{n+1}^{n+1}+x_{n+1}^{n}+\dots+x_{n+1}=1\Rightarrow x_{n+1}\\
+                    &\mbox{若}x_{n+1}>x_n\mbox{，则}x_{n+1}^{n+1}<0\mbox{矛盾}\\
+                    &\therefore x_{n+1}\leq x_n\mbox{且}x_n>0\Rightarrow \lim_{n\to\infty}x_n\mbox{存在}\\
+                    &\lim_{n\to\infty}x_n^n+x_n^{n-1}+\dots+x_n^2+x_n=1\Rightarrow\lim_{n\to\infty}x_n\cdot\frac{1-x_n^n}{1-x_n}=1\\
+                    &\because 0<x_n\leq x_2=\frac{-1+\sqrt{5}}{2}<1\\
+                    &\therefore \lim_{n\to\infty}x_n^n=0\mbox{，设}\lim_{n\to\infty}x_n=A\\
+                    &\therefore\lim_{n\to\infty}x_n\cdot\frac{1-x_n^n}{1-x_n}=\lim_{n\to\infty}x_n\cdot\frac{1}{1-x_n}=A\cdot\frac{1}{1-A}=1\\
+                    &\Rightarrow A=\frac{1}{2}\quad\therefore\lim_{n\to\infty}x_n=\frac{1}{2}
+                \end{align*}
+        \end{enumerate}
+    \end{enumerate}
 % section 经典例题 (end)
