@@ -110,7 +110,14 @@
     \item 设$f(x)$在$(-\infty,+\infty)$上有定义，对任意$x$、$y$有$f(x+y)=e^xf(y)+e^yf(x)$，且$f(x)$在$x=0$处可导，$f^{\prime}(0)=2$，证明$f(x)$在任一点处可导，并求$f(x)$。
         \begin{align*}
             sol:&\mbox{令}x=y=0\Rightarrow f(0)=2f(0)\Rightarrow f(0)=0\\
-                &\therefore f^{\prime}(x)=\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}=\lim_{\Delta x\to 0}\frac{e^xf(\Delta x)+e^{\Delta x}f(x)-f(x)}{\Delta x}
+                &\therefore f^{\prime}(x)=\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}\\
+                &=\lim_{\Delta x\to 0}\frac{e^xf(\Delta x)+e^{\Delta x}f(x)-f(x)}{\Delta x}\\
+                &=\lim_{\Delta x\to 0}e^x\frac{f(\Delta x)-f(0)}{\Delta x}+\lim_{\Delta x\to 0}f(x)\frac{e^{\Delta x}-1}{\Delta x}\\
+                &=e^x\cdot f^{\prime}(0)+f(x)=2e^x+f(x)\\
+                &\therefore f^{\prime}(x)-f(x)=2e^x\Rightarrow f(x)=e^{-\int -1dx}\Big[C+\int2e^x\cdot e^{\int -1dx}dx\Big]\\
+                &\therefore f(x)=e^x[C+2x]=2xe^x+Ce^x\\
+                &\because f^{\prime}(0)=2\Rightarrow C=0\\
+                &\therefore f(x)=2xe^x
         \end{align*}
         %例题7
     \item 设$f(x)$在$(-\infty,+\infty)$上连续，$f(1)=3$，对任意$x>0$，$y>0$有$\int_1^{xy}f(x)dt=x\int_1^y f(t)dt+y\int_1^x f(t)dt$，求$f(x)$。
