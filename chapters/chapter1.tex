@@ -211,30 +211,30 @@
         \begin{enumerate}[$1^\circ$]
             \item ``$+1-1$''法
                 \begin{align*}
-                    \lim_{h \to 0}\frac{\ln(\frac{f(x+hx)-f(x)}{f(x)}+1)}{h}&=\frac{1}{x}\\
-                    \lim_{h \to 0}\frac{f(x+hx)-f(x)}{hf(x)}&=\frac{1}{x}\\
-                    \lim_{h \to 0}\frac{f(x+hx)-f(x)}{hx}&=\frac{1}{x^2}f(x)\\
-                    f^{\prime}(x)&=\frac{1}{x^2}f(x)\\
-                    \therefore f(x)&=e^{-\frac{1}{x}}
+                    &\lim_{h \to 0}\frac{\ln(\frac{f(x+hx)-f(x)}{f(x)}+1)}{h}=\frac{1}{x}\\
+                    &\lim_{h \to 0}\frac{f(x+hx)-f(x)}{hf(x)}=\frac{1}{x}\\
+                    &\lim_{h \to 0}\frac{f(x+hx)-f(x)}{hx}=\frac{1}{x^2}f(x)\\
+                    &f^{\prime}(x)=\frac{1}{x^2}f(x)\\
+                    &\therefore f(x)=e^{-\frac{1}{x}}
                 \end{align*}
             \item 
                 \begin{align*}
-                    \lim_{h \to 0} \frac{\ln f(x+hx)-\ln f(x)}{h}&=\frac{1}{x}\\
-                    \lim_{h \to 0} \frac{\ln f(x+hx)-\ln f(x)}{hx}\cdot x&=\frac{1}{x}\\
-                    x\cdot[\ln f(x)]^{\prime}&=\frac{1}{x}\\
-                    \therefore (\ln f(x))^{\prime}&=\frac{1}{x}\\
-                    \ln f(x)&=\frac{1}{x}\\
-                    f(x)&=e^{-\frac{1}{x}}
+                    &\lim_{h \to 0} \frac{\ln f(x+hx)-\ln f(x)}{h}=\frac{1}{x}\\
+                    &\lim_{h \to 0} \frac{\ln f(x+hx)-\ln f(x)}{hx}\cdot x=\frac{1}{x}\\
+                    &x\cdot[\ln f(x)]^{\prime}=\frac{1}{x}\\
+                    &\therefore (\ln f(x))^{\prime}=\frac{1}{x}\\
+                    &\ln f(x)=\frac{1}{x}\\
+                    &f(x)=e^{-\frac{1}{x}}
                 \end{align*}
             \item 泰勒展开法
                 \begin{align*}
-                    f(x)=f(x_0)+f^{\prime}(x_0)(x-x_0)+o(x-x_0)\\
-                    \therefore f(x+\Delta x)=f(x)+f^{\prime}(x)\Delta x+o(\Delta x)\\
-                    \therefore \ln f(x+hx)=\ln f(x)+[\ln f(x)]^{\prime}hx+o(hx)\\
-                    \mbox{则}\lim_{h \to 0}\frac{\ln f(x+hx)-\ln f(x)}{h}&=\frac{1}{x}\\
-                    \lim_{h \to 0}\frac{[\ln f(x)]^{\prime}hx+o(hx)}{h}&=\frac{1}{x}\\
-                    [\ln f(x)]^{\prime}&=\frac{1}{x^2}\\
-                    \therefore f(x)&=e^{-\frac{1}{x}}
+                    &f(x)=f(x_0)+f^{\prime}(x_0)(x-x_0)+o(x-x_0)\\
+                    &\therefore f(x+\Delta x)=f(x)+f^{\prime}(x)\Delta x+o(\Delta x)\\
+                    &\therefore \ln f(x+hx)=\ln f(x)+[\ln f(x)]^{\prime}hx+o(hx)\\
+                    &\mbox{则}\lim_{h \to 0}\frac{\ln f(x+hx)-\ln f(x)}{h}=\frac{1}{x}\\
+                    &\lim_{h \to 0}\frac{[\ln f(x)]^{\prime}hx+o(hx)}{h}=\frac{1}{x}\\
+                    &[\ln f(x)]^{\prime}=\frac{1}{x^2}\\
+                    &\therefore f(x)=e^{-\frac{1}{x}}
                 \end{align*}
         \end{enumerate}
         %例7
@@ -271,19 +271,19 @@
         \begin{enumerate}[$1^\circ$]
             \item 
                 \begin{align*}
-                    \mbox{原式}&=\lim_{x \to 0}\frac{\frac{\int_0^x f(t)dt}{x}}{f(x)+\frac{\int_0^x f(t) dt}{x}}\\
-                    \mbox{先计算}&\lim_{x \to 0}\frac{\int_0^x f(t) dt}{x}\\
+                    &\mbox{原式}=\lim_{x \to 0}\frac{\frac{\int_0^x f(t)dt}{x}}{f(x)+\frac{\int_0^x f(t) dt}{x}}\\
+                    &\mbox{先计算}\lim_{x \to 0}\frac{\int_0^x f(t) dt}{x}\\
                     &=\lim_{x \to 0}f(x)\\
                     &=f(0)\\
-                    \therefore\mbox{原式}&=\lim_{x \to 0}\frac{f(0)}{f(x)+f(0)}\\
+                    &\therefore\mbox{原式}=\lim_{x \to 0}\frac{f(0)}{f(x)+f(0)}\\
                     &=\frac{1}{2}
                 \end{align*}
             \item 泰勒展开
                 \begin{align*}
-                    \mbox{设}F(x)&=\int_0^x f(t)dt\\
-                    F(x)&=F(0)+F^{\prime}(0)x+o(x)\\
+                    &\mbox{设}F(x)=\int_0^x f(t)dt\\
+                    &F(x)=F(0)+F^{\prime}(0)x+o(x)\\
                     &=0+f(x)x+o(x)\\
-                    \therefore\mbox{原式}&=\lim_{x \to 0}\frac{F(x)}{xf(x)+F(x)}\\
+                    &\therefore\mbox{原式}=\lim_{x \to 0}\frac{F(x)}{xf(x)+F(x)}\\
                     &=\lim_{x \to 0}\frac{xf(x)+o(x)}{xf(x)+xf(x)+o(x)}\\
                     &=\lim_{x \to 0}\frac{f(x)+\frac{o(x)}{x}}{2f(x)+\frac{o(x)}{x}}\\
                     &=\frac{1}{2}
@@ -492,16 +492,16 @@
                 \end{align*}
             \item
                 \begin{align*}
-                    \sum_{k=2}^n y_k&=\sum_{k=2}^n(b-a)(-\frac{1}{2})^{k-2}\\
+                    &\sum_{k=2}^n y_k=\sum_{k=2}^n(b-a)(-\frac{1}{2})^{k-2}\\
                     &=(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{1-(-\frac{1}{2})}\\
                     &=(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}
                 \end{align*}
             \item
                 \begin{align*}
-                    x_n&=y_n+y_{n-1}+\dots+y_2+x_1\\
+                    &x_n=y_n+y_{n-1}+\dots+y_2+x_1\\
                     &=\sum_{k=2}^ny_k+x_1\\
                     &=(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}+x_1\\
-                    \therefore\lim_{n\to\infty}x_n&=\lim_{n\to\infty}(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}+a\\
+                    &\therefore\lim_{n\to\infty}x_n=\lim_{n\to\infty}(b-a)\frac{1-(-\frac{1}{2})^{n-1}}{\frac{3}{2}}+a\\
                     &=\frac{2}{3}(b-a)+a=\frac{1}{3}(2b-a)
                 \end{align*}
         \end{enumerate}
@@ -553,6 +553,7 @@
             \item
                 \begin{align*}
                     \frac{2n}{x}\leq&\frac{\int_0^x\left|\sin t\right|dt}{x}\leq \frac{2(n+1)}{x}\\
+                    \Downarrow&\\
                     \lim_{n\to\infty}\frac{2n}{(n+1)\pi}\leq\frac{2n}{x}\leq&\frac{\int_0^x\left|\sin t\right|dt}{x}\leq \frac{2(n+1)}{x}\leq\lim_{n\to\infty}\frac{2(n+1)}{n\pi}\\
                     \because\lim_{n\to\infty}\frac{2n}{(n+1)\pi}=\frac{2}{\pi}\\
                     \lim_{n\to\infty}\frac{2(n+1)}{n\pi}=\frac{2}{\pi}\\
