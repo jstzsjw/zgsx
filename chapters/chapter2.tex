@@ -122,28 +122,141 @@
         %例题7
     \item 设$f(x)$在$(-\infty,+\infty)$上连续，$f(1)=3$，对任意$x>0$，$y>0$有$\int_1^{xy}f(x)dt=x\int_1^y f(t)dt+y\int_1^x f(t)dt$，求$f(x)$。
         \begin{align*}
-            sol:&\mbox{对}y\mbox{}
+            sol:&\mbox{对}y\mbox{求导}:\\
+                &xf(xy)=xf(y)+\int_1^xf(t)dt\\
+                &\mbox{令}y=1\\
+                &xf(x)=3x+\int_1^xf(t)dt
         \end{align*}
+        \begin{enumerate}[$1^\circ$]
+            \item
+                \begin{align*}
+                    &\mbox{令}F(x)=\int_1^xf(t)dt\\
+                    &xF^{\prime}(x)=3x+F(x)\Rightarrow F^{\prime}(x)-\frac{1}{x}F(x)=3\\
+                    &F(x)=e^{-\int -\frac{1}{x}dx}\bigg[C+\int 3e^{\int -\frac{1}{x}dx}dx\bigg]\\
+                    &=x\Big[C+\int \frac{3}{x}dx\Big]\\
+                    &=Cx+3x\ln x\\
+                    &\therefore f(x)=F^{\prime}(x)=C+3\ln x+3\\
+                    &\because f(1)=3\quad\therefore C=0\\
+                    &\therefore f(x)=3\ln x+3
+                \end{align*}
+            \item
+                \begin{align*}
+                    &\because f(x)=\frac{3x+\int_0^x f(t)dt}{x}\\
+                    &\therefore f(x)\mbox{可导}\\
+                    &f(x)+xf^{\prime}(x)=3+f(x)\Rightarrow f^{\prime}(x)=\frac{3}{x}\\
+                    &\therefore f(x)=3\ln x+C\\
+                    &\because f(1)=3\Rightarrow C=3\\
+                    &\therefore f(x)=3\ln x+3
+                \end{align*}
+        \end{enumerate}
         %例题8
     \item 设$f(x)=\begin{cases}x^3 \sin \frac{1}{x} & x\neq 0\\
                                 0 & x=0
                 \end{cases}$，求使得$f^{(n)}(0)$存在的最大$n$。
+        \begin{align*}
+            sol:&f^{\prime}(0)=0\\
+                &f^{\prime\prime}(0)=\lim_{x\to 0}\frac{f^{\prime}(x)-0}{x}\\
+                &=\lim_{x\to 0}\frac{3x^2\sin \frac{1}{x}-x\cos\frac{1}{x}}{x}\\
+                &=\lim_{x\to 0}3x\sin\frac{1}{x}-\cos\frac{1}{x}\\
+                &\mbox{振荡，极限不存在}\\
+                &\therefore f^{\prime\prime}(0)\mbox{不存在}\quad\therefore n=1
+        \end{align*}
         %例题9
     \item 设$f(x)=3x^3 + x^2 \left|x\right|$，求使得$f^{(n)}(0)$存在的最大$n$。
+        \begin{align*}
+            &\mbox{设}g(x)=x^2\left|x\right|\\
+            &g(x)=\begin{cases}x^3 & x\geq 0\\ -x^3 & x<0\end{cases}\Rightarrow g^{\prime}(x)=\begin{cases}3x^2 & x\geq 0\\ -3x^2 & x<0\end{cases}\\
+            &\lim_{x\to 0}3x^2=\lim_{x\to 0}-3x^2=0\quad\therefore \mbox{可导}\\
+            &g^{\prime\prime}(x)=\begin{cases}6x & x\geq 0\\ -6x & x<0\end{cases}\\
+            &\lim_{x\to 0}6x=\lim_{x\to 0}-6x=0\quad\therefore \mbox{可导}\\
+            &g^{(3)}(x)=\begin{cases} 6 & x\geq 0\\ -6 & x<0\end{cases}\\
+            &\lim_{x\to 0}6\neq\lim_{x\to 0}-6\quad\therefore \mbox{不可导}\\
+            &\mbox{又}\because 3x^3\mbox{对}f(x)\mbox{的可导阶数无影响}\\
+            &\therefore n\mbox{最大为}3
+        \end{align*}
         %例题10
     \item 设$y=(2x+3)^3(3x+2)^2$，求$y^{(5)}$，$y^{(6)}$。
+        \begin{align*}
+            sol:&y\mbox{最高阶为}x^5\\
+                &\therefore y^{(6)}=0\\
+                &y^{(5)}=2^2\cdot 3^2\cdot 5!=8\times 9\times 120=8640
+        \end{align*}
         %例题11
     \item 设$y=\frac{x^4-x^3+2x^2-3x}{x-1}$，求$y^{(5)}$。
+        \begin{align*}
+            sol:&y=\frac{x^3(x-1)+(2x-1)(x-1)-1}{x-1}=x^3+2x-1-\frac{1}{x-1}\\
+                &\therefore y^{(5)}=-1\cdot(-1)^5\cdot 5!\frac{1}{(x-1)^6}=\frac{120}{(x-1)^6}
+        \end{align*}
         %例题12
     \item 设$y=y(x)$由方程$y=\cos x +xe^y$所确定，求$y^{\prime}(0)$，$y^{\prime\prime}(0)$。
+        \begin{align*}
+            sol:&y^{\prime}=-\sin x+e^y+x\cdot e^y\cdot y^{\prime}\\
+                &\mbox{令}x-0\Rightarrow y=1\quad y^{\prime}=e^y\Rightarrow y^{\prime}(0)=e\\
+                &y^{\prime\prime}=-\cos x+e^y\cdot y^{\prime}+e^y\cdot y^{\prime}+x[e^y\cdot y^{\prime}]^{\prime}\\
+                &\mbox{令}x=0\Rightarrow y^{\prime\prime}=-1+e^y\cdot y^{\prime}+e^y\cdot y^{\prime}=-1+2e^2
+        \end{align*}
         %例题13
     \item 设$y=y(x)$由方程$2y^3-2y^2+2xy-x^2 =1$所确定，求$f(x)$的驻点，并判别该驻点是否为极值点。
+        \begin{align*}
+            sol:&6y^2y^{\prime}-4yy^{\prime}+2y+2xy^{\prime}-2x=0\\
+                &\mbox{令}y^{\prime}=0\Rightarrow y=x\quad\mbox{回代}\\
+                &2x^3-2x^2+2x^2-x^2=1\\
+                &2x^3-x^2-1=0\\
+                &(x-1)(2x^2+x+1)=0\\
+                &\therefore\mbox{驻点为}x=1\\
+                &\because 12yy^{\prime 2}+6y^2y^{\prime\prime}-4y^{\prime 2}-4yy^{\prime\prime}+2y^{\prime}+2y^{\prime}+2xy^{\prime\prime}-2=0\\
+                &4y^{\prime\prime}=2\Rightarrow y^{\prime\prime}=\frac{1}{2}\quad\therefore\mbox{为极小值点}
+        \end{align*}
         %例题14
     \item 通过变换$x=\sin t$化简方程$(1-x^2)\frac{d^2y}{dx^2}-x\frac{dy}{dx}+a^2 y=0$，并求原方程的通解。
+        \begin{align*}
+            sol:&\frac{dy}{dt}=\cos t \frac{dy}{dx}\\
+                &\frac{d^2y}{dt^2}=-\sin t\frac{dy}{dx}+\cos t\frac{d\frac{dy}{dx}}{dx}\frac{dx}{dt}\\
+                &=-\sin t\frac{dy}{dx}+\cos^2t\frac{d^2y}{dx^2}\\
+                &=-x\frac{dy}{dx}+(1-x^2)\frac{d^2y}{dx^2}\\
+                &\therefore \frac{d^2y}{dt^2}+a^2y=0\\
+        \end{align*}
+        \begin{enumerate}[(1)]
+            \item
+                \begin{align*}
+                    &a=0\mbox{时}\quad y^{\prime\prime}=0\\
+                    &\lambda^2=0\Rightarrow\lambda_1=\lambda_2=0,\Delta=0\\
+                    &\therefore y=(C_1+C_2t)e^{0t}=C_1+C_2t=C_1+C_2\arcsin x
+                \end{align*}
+            \item
+                \begin{align*}
+                    &a\neq 0\mbox{时}\quad y^{\prime\prime}+a^2y=0\\
+                    &\lambda^2+a^2=0\Rightarrow\lambda_1=ai,\lambda_2=-ai,\Delta<0\\
+                    &\therefore y=e^{0t}(C_1\cos at+C_2\sin at)\\
+                    &=C_1\cos at+C_2\sin at\\
+                    &=C_1\cos (a\cdot\arcsin x)+C_2\sin (a\cdot\arcsin x)
+                \end{align*}
+        \end{enumerate}
         %例题15
     \item 通过变换$x=\frac{u}{\cos x}$化简方程$\cos x \frac{d^2 y}{d x^2}-2\sin x \frac{dy}{dx}+3y \cos x=e^x$，并求原方程的通解。
+        \begin{align*}
+            sol:&u=y\cdot\cos x\\
+                &\therefore \frac{du}{dx}=\cos x\frac{dy}{dx}-y\sin x\\
+                &\frac{d^2y}{dx^2}=\cos x\frac{d^2y}{dx^2}-\sin x\frac{dy}{dx}-\sin x\frac{dy}{dx}-y\cos x\\
+                &=\cos x\frac{d^2y}{dx^2}-2\sin x\frac{dy}{dx}-y\cos x\\
+                &\therefore u^{\prime\prime}+4u=e^x\\
+                &\lambda^2+4=0\Rightarrow\lambda_1=2i,\lambda_2=-2i\\
+                &\therefore \bar{u}=e^{0x}(C_1\cos 2x+C_2\sin 2x)\\
+                &u^*=Ae^x\\
+                &\mbox{又}\because u^{\prime\prime}+4u=e^x\Rightarrow A=\frac{1}{5}\\
+                &\therefore u=C_1\cos 2x+C_2\sin 2x+\frac{1}{5}e^x\\
+                &\therefore y=\frac{u}{\cos x}=C_1\frac{\cos 2x}{\cos x}+C_2\frac{\sin 2x}{\cos x}+\frac{e^x}{5\cos x}\\
+                &=C_1\frac{\cos 2x}{\cos x}+C_2\sin x+\frac{e^x}{5\cos x}
+        \end{align*}
         %例题16
     \item 设$f(x)=y(x)$满足方程$y^{\prime\prime}+(x+e^{2y})y^{\prime 3}=0$，$y^{\prime}\neq 0$，试将该方程化为$y=y(x)$的反函数$x=x(y)$满足的微分方程，并求原方程的通解。
+        \begin{align*}
+            sol:&\frac{dx}{dy}=\frac{1}{y^{\prime}}\quad\frac{d^2x}{dy^2}=\frac{d(\frac{1}{y^{\prime}})}{dx}\frac{dx}{dy}=-\frac{\frac{y^{\prime\prime}}{y^{\prime 2}}}{y^{\prime}}=-\frac{y^{\prime\prime}}{y^{\prime 3}}\\
+                &\frac{d^x}{dy^2}-x=e^{2y}\quad\lambda^2-1=0\Rightarrow\lambda=\pm 1\\
+                &\bar{x}=C_1e^y+C_2e^{-y}\quad x^*=Ae^{2y}\\
+                &\because 4Ae^{2y}-Ae^{2y}=e^{2y}\Rightarrow A=\frac{1}{3}\\
+                &\therefore x=C_1e^y+C_2y^{-y}+\frac{1}{3}e^{2y}
+        \end{align*}
         %例题17
 \end{enumerate}
 % section 经典例题 (end)
