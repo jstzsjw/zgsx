@@ -155,7 +155,17 @@
                             &=2(x-2)\sqrt{e^x-1}+4\arctan\sqrt{e^x-1}+C
                     \end{align*}
                 \item $\int \frac{1}{2-\sqrt[3]{x+1}}dx$
+                    \begin{align*}
+                        sol:&\xrightarrow{t=\sqrt[3]{x+1}}\int\frac{1}{2-t}d(t^3-1)=\int\frac{3t^2}{2-t}dt\\
+                            &=\int -3t-6+\frac{12}{2-t}dt\\
+                            &=-\frac{3}{2}(x+1)^{\frac{2}{3}}-6(x+1)^{\frac{1}{3}}-12\ln\left|2-(1+x)^{\frac{1}{3}}\right|+C
+                    \end{align*}
                 \item $\int \frac{\sqrt[3]{x}}{x(\sqrt{x}+\sqrt[3]{x})}dx$
+                    \begin{align*}
+                        sol:&\xrightarrow{t=\sqrt[6]{x}}\int\frac{t^2}{t^6(t^3+t^2)}dt^6=\int\frac{6t^7}{t^6(t^3+t^2)}dt\\
+                            &=6\int\frac{1}{t^2+t}dt=6\ln\left|\frac{t}{1+t}\right|+C\\
+                            &=6\ln\left|\frac{\sqrt[6]{x}}{1+\sqrt[6]{x}}\right|+C
+                    \end{align*}
             \end{enumerate}
         %例题5
     \item   \begin{enumerate}[(1)]

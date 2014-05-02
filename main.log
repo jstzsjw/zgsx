@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.11)  2 MAY 2014 18:02
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.11)  2 MAY 2014 18:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1636,29 +1636,29 @@ Missing character: There is no ͡ in font cmmi12!
 LaTeX Warning: Command \t invalid in math mode on input line 91.
 
 Missing character: There is no ͡ in font cmmi12!
-[33] [34] [35]) [36]
+[33] [34] [35] [36]) [37]
 \openout2 = `part/part2.aux'.
 
- (./part/part2.tex [37
+ (./part/part2.tex [38
 
 
 
-] [38])
+] [39] [40])
 \openout2 = `part/part3.aux'.
 
- (./part/part3.tex [39
-
-
-
-]
-[40])
-\openout2 = `part/part4.aux'.
-
- (./part/part4.tex [41
+ (./part/part3.tex
+[41
 
 
 
 ] [42])
+\openout2 = `part/part4.aux'.
+
+ (./part/part4.tex [43
+
+
+
+] [44])
 \openout2 = `exercises/exercise1.aux'.
 
  (./exercises/exercise1.tex
@@ -1674,17 +1674,17 @@ r/m/n/12 ))$\EU1/AdobeSongStd(0)/m/n/12 ，| $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 
 obeSongStd(0)/m/n/12 ，|
  []
 
-[43
+[45
 
 
 
-] [44]) [45]
+] [46]) [47]
 \openout2 = `exercises/exercise2.aux'.
 
- (./exercises/exercise2.tex [46
+ (./exercises/exercise2.tex [48
 
 
-] [47]) [48]
+] [49]) [50]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 23.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 23.
  (./main.aux
@@ -1708,4 +1708,4 @@ Here is how much of TeX's memory you used:
  1144 hyphenation exceptions out of 8191
  60i,18n,57p,738b,693s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (48 pages).
+Output written on main.pdf (50 pages).
