@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.11)  29 APR 2014 23:49
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2013.9.11)  2 MAY 2014 17:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1627,29 +1627,38 @@ Chapter 3.
 
 
 
-]) [32]
+] [32]
+
+LaTeX Warning: Command \t invalid in math mode on input line 91.
+
+Missing character: There is no ͡ in font cmmi12!
+
+LaTeX Warning: Command \t invalid in math mode on input line 91.
+
+Missing character: There is no ͡ in font cmmi12!
+[33] [34] [35]) [36]
 \openout2 = `part/part2.aux'.
 
- (./part/part2.tex [33
-
-
-
-] [34])
-\openout2 = `part/part3.aux'.
-
- (./part/part3.tex [35
-
-
-
-] [36])
-\openout2 = `part/part4.aux'.
-
-
-(./part/part4.tex [37
+ (./part/part2.tex [37
 
 
 
 ] [38])
+\openout2 = `part/part3.aux'.
+
+ (./part/part3.tex [39
+
+
+
+]
+[40])
+\openout2 = `part/part4.aux'.
+
+ (./part/part4.tex [41
+
+
+
+] [42])
 \openout2 = `exercises/exercise1.aux'.
 
  (./exercises/exercise1.tex
@@ -1665,17 +1674,17 @@ r/m/n/12 ))$\EU1/AdobeSongStd(0)/m/n/12 ，| $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 
 obeSongStd(0)/m/n/12 ，|
  []
 
-[39
+[43
 
 
 
-] [40]) [41]
+] [44]) [45]
 \openout2 = `exercises/exercise2.aux'.
 
- (./exercises/exercise2.tex [42
+ (./exercises/exercise2.tex [46
 
 
-] [43]) [44]
+] [47]) [48]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 23.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 23.
  (./main.aux
@@ -1691,12 +1700,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 23.
  ) 
 Here is how much of TeX's memory you used:
- 32865 strings out of 493938
- 657846 string characters out of 6148857
+ 32866 strings out of 493938
+ 657857 string characters out of 6148857
  659949 words of memory out of 5000000
- 35603 multiletter control sequences out of 15000+600000
+ 35604 multiletter control sequences out of 15000+600000
  9885 words of font info for 67 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  60i,18n,57p,738b,693s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (44 pages).
+Output written on main.pdf (48 pages).

@@ -10,34 +10,150 @@
 \begin{enumerate}[{例}1.]
     \item   \begin{enumerate}[(1)]
                 \item $\int \frac{\ln x}{x}dx$
+                    \begin{align*}
+                        sol:&\int\ln xd\ln x=\frac{1}{2}\ln^2 x+C
+                    \end{align*}
                 \item $\int \frac{1}{x^2}e^{-\frac{1}{x}}dx$
+                    \begin{align*}
+                        sol:&\int e^{-\frac{1}{x}}d{-\frac{1}{x}}=e^{-\frac{1}{x}}+C
+                    \end{align*}
                 \item $\int \sqrt{\frac{\arcsin x}{1-x^2}}dx$
+                    \begin{align*}
+                        sol:&\int \sqrt{\arcsin x}d\arcsin x=\frac{2}{3}(\arcsin x)^{\frac{3}{2}}+C
+                    \end{align*}
                 \item $\int \frac{\ln \tan x}{\sin x \cos x}dx$
+                    \begin{align*}
+                        sol:&\int \ln\tan xd\ln\tan x=\frac{1}{2}(\ln\tan x)^2
+                    \end{align*}
             \end{enumerate}
         %例题1
     \item   \begin{enumerate}[(1)]
                 \item $\int \frac{1+\ln x}{(x\ln x)^2}dx$
+                    \begin{align*}
+                        sol:&\int\frac{1}{(x\ln x)^2}d(x\ln x)=-\frac{1}{(x\ln x)^2}dx
+                    \end{align*}
                 \item $\int \frac{\ln (1+x)-\ln x}{x(1+x)}dx$
+                    \begin{align*}
+                        sol:&-\int\ln(1+x)-\ln xd[\ln(1+x)-\ln x]=-\frac{1}{2}[\ln(1+x)-\ln x]^2+C
+                    \end{align*}
                 \item $\int \sqrt{\frac{x}{1-x\sqrt{x}}}dx$
+                    \begin{align*}
+                        sol:&=\int\frac{\sqrt{x}}{\sqrt{1-x\sqrt{x}}}dx\\
+                            &\because(1-x\sqrt{x})^{\prime}=-\sqrt{x}-\frac{1}{2}x\frac{1}{\sqrt{x}}=-\frac{3}{2}\sqrt{x}\\
+                            &\therefore=\int\frac{1}{\sqrt{1-x\sqrt{x}}}(-\frac{2}{3})d(1-x\sqrt{x})\\
+                            &=-\frac{2}{3}\times 2(1-x\sqrt{x})^{\frac{1}{2}}+C\\
+                            &=-\frac{4}{3}(1-x\sqrt{x})^{\frac{1}{2}}+C
+                    \end{align*}
                 \item $\int \frac{1+x}{x(1+xe^x)}dx$
+                    \begin{align*}
+                        sol:&\because(xe^x)^{\prime}=e^x+xe^x=e^x(1+x)\\
+                            &\therefore\int\frac{1+x}{x(1+xe^x)}dx\\
+                            &=\int\frac{e^x(1+x)}{xe^x(1+e^x)}dx=\int\frac{1}{xe^x(1+xe^x)}dxe^x\\
+                            &\xrightarrow{u=xe^x}\int\frac{1}{u(1+u)}du=\int\frac{1+u}{u(1+u^2)}du=\int\frac{1+u}{u}d\frac{u}{1+u}\\
+                            &=\ln\left|\frac{u}{1+u}\right|=\ln\left|\frac{xe^x}{1+xe^x}\right|
+                    \end{align*}
             \end{enumerate}
         %例题2
     \item   \begin{enumerate}[(1)]
                 \item $\int \frac{1}{x(1+x^n)}dx \quad (n \neq 0)$
+                    \begin{align*}
+                        sol:&\because(x^n)^{\prime}=nx^{n-1}\\
+                            &\therefore=\frac{1}{n}\int\frac{nx^{n-1}}{x^n(1+x^n)}dx=\frac{1}{n}\int\frac{1}{x^n(1+x^n)}dx^n\\
+                            &=\frac{1}{n}\ln\left|\frac{x^n}{1+x^n}\right|+C
+                    \end{align*}
                 \item $\int \frac{1}{(2x^2+1)\sqrt{x^2+1}}dx$
+                    \begin{align*}
+                        sol:&\xrightarrow{x=\tan t}\int\frac{1}{(2\tan^2 t+1)\cdot\frac{1}{\cos t}}\cdot\frac{1}{\cos^2 t}dt=\int\frac{\sec t}{2\tan^2 t+1}dt\\
+                            &=\int\frac{\cos t}{1+\sin^2 t}dt=\arctan(\sin t)+C=\arctan\frac{x}{\sqrt{x^2+1}}+C
+                    \end{align*}
                 \item $\int \frac{\ln x}{(1+x^2)^{\frac{3}{2}}}dx$
+                    \begin{align*}
+                        sol:&\xrightarrow{x=\tan t}\int\ln(\tan t)\cos^3 t\frac{1}{\cos^2 t}dt=\int\ln(\tan t)\cos tdt\\
+                            &=\sin t\ln\tan t-\int\sin t\frac{\cos t}{\sin t}\frac{1}{\cos^2 t}dt\\
+                            &=\frac{x}{\sqrt{x^2+1}}\ln x-\ln\left|\sec t+\tan t\right|+C\\
+                            &=\frac{x\ln x}{\sqrt{x^2+1}}-\ln\left|x+\sqrt{x^2+1}\right|+C
+                    \end{align*}
             \end{enumerate}
         %例题3
     \item   \begin{enumerate}[(1)]
                 \item $\int \frac{x^2\arctan x}{1+x^2}dx$
+
+                    $sol:$
+                    \begin{enumerate}[$1^\circ$]
+                        \item
+                            \begin{align*}
+                                &=\int\frac{x^2\arctan x}{1+x^2}dx=\int x^2\arctan xd\arctan x\\
+                                &\xrightarrow{t=\arctan x}\int\tan^2 t\cdot tdt=\int(\frac{1}{\cos^2 t}-1)tdt\\
+                                &=\int(\sec^2 t-1)tdt=\int t\sec^2 tdt-\int tdt\\
+                                &=t\tan t-\int\tan tdt-\int tdt\\
+                                &=t\t\tan t+\ln\left|\cos t\right|-\frac{1}{2}t^2+C\\
+                                &=x\arctan x+\ln\frac{1}{\sqrt{x^2+1}}-\frac{1}{2}\arctan^2 x+C
+                            \end{align*}
+                        \item
+                            \begin{align*}
+                                &=\int\frac{x^2+1-1}{1+x^2}\arctan xdx\\
+                                &=\int\arctan xdx-\int\frac{1}{1+x^2}\arctan xdx\\
+                                &=x\arctan x-\int xd\arctan x-\int\frac{1}{x^2+1}\arctan xdx\\
+                                &=x\arctan x-\int\frac{x}{1+x^2}dx-\int\arctan xd\arctan x\\
+                                &=x\arctan x-\frac{1}{2}\ln(1+x^2)-\frac{1}{2}\arctan^2 x+C
+                            \end{align*}
+                    \end{enumerate}
                 \item $\int \frac{1}{x^2(1+x^2)^2}dx$
+                    \begin{align*}
+                        sol:&\xrightarrow{x=\tan t}\int\frac{1}{\tan^2 t(\frac{1}{\cos^2 t})^2}\frac{1}{\cos^2 t}dt=\int\frac{\cos^2 t}{\tan^2 t}dt\\
+                            &=\int\frac{\cos^4 t}{\sin^2 t}dt=\int\frac{(1-\sin^2 t)^2}{\sin^2 t}=\int(\frac{1}{\sin^2 t}-2+\sin^2 t)dt\\
+                            &=-\cot t-2t+\int\frac{1}{2}(1-\cos 2t)dt\\
+                            &=-\cot t-2t+\frac{1}{4}(2t-\sin 2t)\\
+                            &=-\cot t-\frac{1}{4}\sin 2t-\frac{3}{2}t\\
+                            &=-\frac{1}{x}-\frac{3}{2}\arctan x-\frac{1}{2}\sin t\cos t\\
+                            &=-\frac{1}{x}-\frac{3}{2}\arctan x-\frac{x}{2(x^2+1)}+C
+                    \end{align*}
                 \item $\int \frac{1}{x\sqrt{4-x^2}}dx$
+
+                    $sol:$
+                    \begin{enumerate}[$1\circ$]
+                        \item
+                            \begin{align*}
+                                &\xrightarrow{x=2\sin t}\int\frac{1}{2\sin t\cdot 2\cos t}2\cos tdt=\frac{1}{2}\ln\left|\csc t+\cot t\right|+C\\
+                                &=\frac{1}{2}\ln\left|\frac{2-\sqrt{4-x^2}}{x}\right|+C
+                            \end{align*}
+                        \item
+                            \begin{align*}
+                                &\xrightarrow{x=\frac{1}{t}}\int\frac{1}{\frac{1}{t}\sqrt{4-\frac{1}{t^2}}}\cdot \bigg(-\frac{1}{t^2}\bigg) dt=-\int\frac{1}{\sqrt{4-\frac{1}{t^2}}}\frac{1}{t}dt\\
+                                &=-\int\frac{1}{\sqrt{4t^2-1}}dt=-\frac{1}{2}\int\frac{1}{\sqrt{(2t)^2-1}}d2t\\
+                                &=-\frac{1}{2}\ln\left|2t+\sqrt{4t^2-1}\right|+C\\
+                                &=-\frac{1}{2}\ln\left|\frac{2}{x}+\sqrt{4\frac{1}{x^2}-1}\right|+C=-\frac{1}{2}\ln\left|\frac{2+\sqrt{4-x^2}}{x}\right|+C
+                            \end{align*}
+                        \end{enumerate}
                 \item $\int \frac{1}{x^2\sqrt{x^2-x+1}}dx$
+                    \begin{align*}
+                        sol:&\xrightarrow{x=\frac{1}{t}}\int\frac{t^2}{\sqrt{\frac{1}{t^2}-\frac{1}{t}-1}}\cdot(-\frac{1}{t^2})dt=-\int\frac{t}{\sqrt{t^2-t+1}}dt\\
+                            &=-\int\frac{t}{\sqrt{(t-\frac{1}{2})^2+\frac{3}{4}}}dt=-\int\frac{(t-\frac{1}{2})+\frac{1}{2}}{\sqrt{(t-\frac{1}{2})+\frac{3}{4}}}d(t-\frac{1}{2})\\
+                            &\xrightarrow{u=t-\frac{1}{2}}-\int\frac{u+\frac{1}{2}}{\sqrt{u^2+\frac{3}{4}}}du\\
+                            &=-\int\frac{1}{2\sqrt{u^2+\frac{3}{4}}}du=-\int\frac{1}{2\sqrt{u^2+\frac{3}{4}}}du^2-\frac{1}{2}\int\frac{1}{\sqrt{u^2+\frac{3}{4}}}du\\
+                            &=-\sqrt{u^2+\frac{3}{4}}-\frac{1}{2}\ln\left|u+\sqrt{u^2+\frac{3}{4}}\right|+C\\
+                            &=-\sqrt{\bigg(\frac{1}{x}-\frac{1}{2}\bigg)^2+\frac{3}{4}}-\frac{1}{2}\ln\left|\frac{1}{x}-\frac{1}{2}+\sqrt{\bigg(\frac{1}{x}-\frac{1}{2}\bigg)^2+\frac{3}{4}}\right|+C\\
+                            &=-\frac{\sqrt{x^2-x+1}}{x}-\frac{1}{2}\ln\left|\frac{1}{x}-\frac{1}{2}+\frac{\sqrt{x^2-x+1}}{x}\right|+C
+                    \end{align*}
             \end{enumerate}
         %例题4
     \item   \begin{enumerate}[(1)]
                 \item $\int \frac{\arcsin x}{x^2\sqrt{1-x^2}}dx$
+                    \begin{align*}
+                        sol:&\xrightarrow{x=\sin t}\int\frac{t}{\sin^2 t\cos t}\cos tdt=\int\frac{t}{\sin^2 t}dt\\
+                            &=-\int td\cot t=-t\cot t+\int\cot tdt\\
+                            &=-\arcsin x\cdot\frac{\sqrt{1-x^2}}{x}+\ln\left|\sin t\right|+C\\
+                            &=-\frac{\sqrt{1-x^2}}{x}arcsin x+\ln\left|x\right|+C
+                    \end{align*}
                 \item $\int \frac{xe^x}{\sqrt{e^x -1}}dx$
+                    \begin{align*}
+                        sol:&\xrightarrow{t\sqrt{e^x-1}}\int\frac{\ln(t^2+1)(t^2+1)}{t}\frac{2t}{t^2+1}dt=\int 2\ln(t^2+1)dt\\
+                            &=2t\ln(t^2+1)-4\int\frac{t^2}{t^2+1}dt\\
+                            &=2t\ln(t^2+1)-4\int\frac{t^2+1-1}{t^2+1}dt\\
+                            &=2t\ln(t^2+1)-4\int dt+4\int\frac{1}{1+t^2}dt\\
+                            &=2t\ln(t^2+1)-4t+4\arctan t+C\\
+                            &=2(x-2)\sqrt{e^x-1}+4\arctan\sqrt{e^x-1}+C
+                    \end{align*}
                 \item $\int \frac{1}{2-\sqrt[3]{x+1}}dx$
                 \item $\int \frac{\sqrt[3]{x}}{x(\sqrt{x}+\sqrt[3]{x})}dx$
             \end{enumerate}
